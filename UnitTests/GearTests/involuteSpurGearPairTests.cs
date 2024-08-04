@@ -8,7 +8,6 @@ namespace UnitTests.GearTests;
 [TestFixture]
 public class InvoluteSpurGearPairTests
 {
-    private readonly ConsoleIO _io = new();
     private static readonly InvoluteSpurGearPair Gear = new();
    
 
@@ -30,7 +29,7 @@ public class InvoluteSpurGearPairTests
     {
     }
 
-    public double RetrieveGearValue(GearParameterName name)
+    private static double RetrieveGearValue(GearParameterName name)
     {
         Gear.Calculate();
         return Gear.DataDictionary.RetrieveByName(name).Value;

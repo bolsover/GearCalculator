@@ -8,7 +8,6 @@ namespace UnitTests.GearTests;
 [TestFixture]
 public class ProfileShiftedExtSpurGearPairTests
 {
-    private readonly ConsoleIO _io = new();
     private static readonly ProfileShiftedExtSpurGearPair Gear = new();
     
 
@@ -39,8 +38,8 @@ public class ProfileShiftedExtSpurGearPairTests
     {
     }
 
-    
-    public double RetrieveGearValue(GearParameterName name)
+
+    private static double RetrieveGearValue(GearParameterName name)
     {
         Gear.Calculate();
         return Gear.DataDictionary.RetrieveByName(name).Value;

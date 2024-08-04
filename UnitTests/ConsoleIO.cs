@@ -1,17 +1,16 @@
 ﻿using System;
 
-namespace UnitTests
+namespace UnitTests;
+
+public class ConsoleIo
 {
-    public class ConsoleIO
+    public void WriteLine(string s)
     {
-        public void WriteLine(string s)
-        {
-            Console.WriteLine(s);
-        }
+        Console.WriteLine(s);
+    }
         
-        public string ReadLine()
-        {
-            return Console.ReadLine()!;
-        }
+    public string ReadLine()
+    {
+        return Console.ReadLine()!;
     }
 }

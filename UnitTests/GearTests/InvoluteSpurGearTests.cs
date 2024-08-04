@@ -1,5 +1,4 @@
-﻿using Bolsover.GearCalculator;
-using Bolsover.GearCalculator.Dictionary;
+﻿using Bolsover.GearCalculator.Dictionary;
 using Bolsover.GearCalculator.Gear;
 using NUnit.Framework;
 
@@ -8,7 +7,6 @@ namespace UnitTests.GearTests;
 [TestFixture]
 public class InvoluteSpurGearTests
 {
-    private readonly ConsoleIO _io = new();
     private static readonly InvoluteSpurGear Gear = new();
   
 
@@ -28,8 +26,8 @@ public class InvoluteSpurGearTests
     {
     }
 
-    
-    public double RetrieveGearValue(GearParameterName name)
+
+    private static double RetrieveGearValue(GearParameterName name)
     {
         Gear.Calculate();
         return Gear.DataDictionary.RetrieveByName(name).Value;

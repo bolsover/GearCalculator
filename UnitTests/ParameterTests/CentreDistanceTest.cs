@@ -1,23 +1,19 @@
-﻿using Bolsover.GearCalculator;
-using Bolsover.GearCalculator.Dictionary;
+﻿using Bolsover.GearCalculator.Dictionary;
 using Bolsover.GearCalculator.Gear;
 using NUnit.Framework;
 
-namespace UnitTests.ParameterTests
-{
-    [TestFixture]
+namespace UnitTests.ParameterTests;
+
+[TestFixture]
 public class CentreDistanceTest{
-    private readonly ConsoleIO _io = new();
     private static readonly InvoluteSpurGearPair Gear = new();
-    private readonly GearDataDictionary _gearDataDictionary = new GearDataDictionary(Gear.Parameters);
+    private readonly GearDataDictionary _gearDataDictionary = new(Gear.Parameters);
 
     [SetUp]
     public void SetUp()
     {
         var module = _gearDataDictionary.RetrieveByName(GearParameterName.Module);
         module.Value = 2.5d;
-        // var teeth = _gearDataDictionary.RetrieveByName(GearParameterName.Teeth);
-        // teeth.Value = 18;
         var teethPinion = _gearDataDictionary.RetrieveByName(GearParameterName.TeethPinion);
         teethPinion.Value = 18;
         var teethWheel = _gearDataDictionary.RetrieveByName(GearParameterName.TeethWheel);
@@ -36,17 +32,11 @@ public class CentreDistanceTest{
     {
        
 
-        var module = _gearDataDictionary.RetrieveByName(GearParameterName.Module);
-        module.Value = 2.5d;
-        var teethPinion = _gearDataDictionary.RetrieveByName(GearParameterName.TeethPinion);
-        teethPinion.Value = 18;
-        var teethWheel = _gearDataDictionary.RetrieveByName(GearParameterName.TeethWheel);
-        teethWheel.Value = 25;
+        
         var centreDistance = _gearDataDictionary.RetrieveByName(GearParameterName.StandardCentreDistance);
-        var expectedValue = 53.75d;
+        const double expectedValue = 53.75d;
         var v = centreDistance.Calculate(_gearDataDictionary);
 
         Assert.That(expectedValue, Is.EqualTo(v));
     }
-}
 }

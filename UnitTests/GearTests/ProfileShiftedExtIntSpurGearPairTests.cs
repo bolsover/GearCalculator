@@ -6,9 +6,8 @@ using NUnit.Framework;
 namespace UnitTests.GearTests;
 
 [TestFixture]
-public class ProfileShiftedExtIntSpurgearPairTests
+public class ProfileShiftedExtIntSpurGearPairTests
 {
-    private readonly ConsoleIO _io = new();
     private static readonly ProfileShiftedExtIntSpurGearPair Gear = new();
     
 
@@ -39,8 +38,8 @@ public class ProfileShiftedExtIntSpurgearPairTests
     {
     }
 
-    
-    public double RetrieveGearValue(GearParameterName name)
+
+    private static double RetrieveGearValue(GearParameterName name)
     {
         Gear.Calculate();
         return Gear.DataDictionary.RetrieveByName(name).Value;
@@ -52,35 +51,7 @@ public class ProfileShiftedExtIntSpurgearPairTests
         Assert.That(0.500d, Is.EqualTo(RetrieveGearValue(GearParameterName.PseiDifferenceCoefficientProfileShift)).Within(0.0001d));
     }
 
-    // [Test]
-    // public void TestStandardCentreDistance()
-    // {
-    //     Assert.AreEqual(54.0d, RetrieveGearValue(GearParameterName.StandardCentreDistance), 0.0001d);
-    // }
-    //
-    // [Test]
-    // public void TestInvoluteFunction()
-    // {
-    //     Assert.AreEqual(0.014904d, RetrieveGearValue(GearParameterName.InvoluteFunction), 0.0001d);
-    // }
-    //
-    // [Test]
-    // public void TestWorkingInvoluteFunction()
-    // {
-    //     Assert.AreEqual(0.034317d, RetrieveGearValue(GearParameterName.WorkingInvoluteFunction), 0.0001d);
-    // }
-    //
-    // [Test]
-    // public void TestWorkingPressureAngle()
-    // {
-    //     Assert.AreEqual(26.08883d, RetrieveGearValue(GearParameterName.WorkingPressureAngle), 0.0001d);
-    // }
-    //
-    // [Test]
-    // public void TestCentreDistanceIncrementFactor()
-    // {
-    //     Assert.AreEqual(0.83333d, RetrieveGearValue(GearParameterName.PseCentreDistanceIncrementFactor), 0.0001d);
-    // }
+   
     
     
 }
