@@ -1,25 +1,28 @@
-﻿using Bolsover.GearCalculator.Dictionary;
+﻿using System.Collections.Generic;
+using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.PSEPair;
 
-public class PseCentreDistanceIncrementFactor : IGearParameter
+public class PseCentreDistanceIncrementFactor : GearParameter
 {
-    public string Name { get; set; } = "PseCentreDistanceIncrementFactor";
-    public string Description { get; set; } = "PseCentreDistanceIncrementFactor";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.CentreDistanceIncrementFactor;
-    public string LatexFormula { get; set; } = LatexFormulae.PseCentreDistanceIncrementFactor;
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public PseCentreDistanceIncrementFactor()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethPinion, out var teethPinion);
-        dataDictionary.TryGetValue(GearParameterName.TeethWheel, out var teethWheel);
-        dataDictionary.TryGetValue(GearParameterName.WorkingCentreDistance, out var workingCentreDistance);
-        var z1 = teethPinion.Value;
-        var z2 = teethWheel.Value;
-        var m = module.Value;
-        var ax = workingCentreDistance.Value;
+        ParameterName = GearParameterName.PseCentreDistanceIncrementFactor;
+        Description = "Centre Distance Increment Factor";
+
+        LatexSymbol = LatexSymbols.CentreDistanceIncrementFactor;
+        LatexFormula = LatexFormulae.PseCentreDistanceIncrementFactor;
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var z1 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion)).Value;
+        var z2 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel)).Value;
+        var m = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module)).Value;
+        var ax = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.WorkingCentreDistance))
+            .Value;
+
 
         return ax / m - (z1 + z2) / 2;
     }

@@ -34,8 +34,14 @@ public static class LatexSymbols
     public static readonly string CoefficientOfProfileShift = @"x";
     public static readonly string CoefficientOfProfileShiftPinion = @"x_{1}";
     public static readonly string CoefficientOfProfileShiftWheel = @"x_{2}";
-    public static readonly string SumCoefficientOfProfileShift = @"\Sigma x";
+    public static readonly string SumCoefficientOfProfileShift = @"x_{1}+x_{2}";
     public static readonly string DifferenceCoefficientOfProfileShift = @"\Delta x";
     public static readonly string CentreDistanceIncrementFactor = @"y";
-    public static readonly string InvoluteFunction  = @"inv\:\alpha";
+    public static readonly string InvoluteFunction = @"inv\:\alpha";
+    public static readonly string PseiInvoluteFunction = @"inv\:\alpha_{w}";
+   
+    public static readonly string TotalContactRatio = @"d\epsilon_{\gamma}";
+    public static readonly string WholeDepth = @"h";
+    public static readonly string WorkingInvoluteFunction =  @"inv\:\alpha_{w}";
+    public static readonly string WorkingPressureAngle  = @"\alpha_{w}";
 }

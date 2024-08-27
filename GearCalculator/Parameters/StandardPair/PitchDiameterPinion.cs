@@ -1,22 +1,25 @@
-﻿using Bolsover.GearCalculator.Dictionary;
+﻿using System.Collections.Generic;
+using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
-public class PitchDiameterPinion : IGearParameter
+public class PitchDiameterPinion : GearParameter
 {
-
-    public string Name { get; set; } = "PitchDiameterPinion";
-    public string Description { get; set; } = "PitchDiameterPinion";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = "d";
-    public string LatexFormula { get; set; } = @"z_{1}m";
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public PitchDiameterPinion()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethPinion, out var teeth);
+        ParameterName = GearParameterName.PitchDiameterPinion;
+        Description = "Pitch Diameter";
 
-        var z = teeth.Value;
+        LatexSymbol = LatexSymbols.PitchDiameterPinion;
+        LatexFormula = LatexFormulae.PitchDiameterPinion; //@"z_{1}m";
+    }
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
+        var teethPinion = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion));
+
+        var z = teethPinion.Value;
 
         var m = module.Value;
 

@@ -32,12 +32,12 @@ public enum GearParameterName
     InvoluteFunction,
     WorkingInvoluteFunction,
     WorkingPressureAngle,
-    
+
     WorkingPitchDiameter,
     WholeDepth,
     TotalContactRatio,
 
-    
+
     PseAddendumPinion,
     PseAddendumWheel,
     PseDedendumPinion,
@@ -51,8 +51,14 @@ public enum GearParameterName
     PseWorkingPitchDiameterWheel,
     PseTotalContactRatio,
     PseCentreDistanceIncrementFactor,
-    
+
     PseiDifferenceCoefficientProfileShift,
-    PseiCentreDistanceIncrementFactor
-   
+    PseiCentreDistanceIncrementFactor,
+    PseiStandardCentreDistance,
+    PseiAddendumPinion,
+    PseiAddendumWheel,
+    PseiDedendumPinion,
+    PseiDedendumWheel,
+    PseiInvoluteFunction,
+    PseiWorkingPressureAngle
 }

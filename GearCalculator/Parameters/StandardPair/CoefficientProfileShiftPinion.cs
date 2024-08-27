@@ -3,16 +3,19 @@ using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
-public class CoefficientProfileShiftPinion : IGearParameter
+public class CoefficientProfileShiftPinion : GearParameter
 {
+    public CoefficientProfileShiftPinion()
+    {
+        ParameterName = GearParameterName.CoefficientProfileShiftPinion;
+        Description = "Coefficient of Profile Shift";
 
-    public string Name { get; set; } = "CoefficientProfileShiftPinion";
-    public string Description { get; set; } = "CoefficientProfileShiftPinion";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.CoefficientOfProfileShiftPinion;
-    public string LatexFormula { get; set; } = @"";
+        LatexSymbol = LatexSymbols.CoefficientOfProfileShiftPinion;
+        LatexFormula = @"";
+    }
 
-    public double Calculate(GearDataDictionary dataDictionary)
+
+    public double Calculate(GearDataParameters dataParameters)
     {
         throw new NotImplementedException();
     }

@@ -3,16 +3,20 @@ using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
-public class Module : IGearParameter
+public class Module : GearParameter
 {
-    public string Name { get; set; } = "Module";
-    public string Description { get; set; } = "Module";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.Module;
-    public string LatexFormula { get; set; } = "";
+    public Module()
+    {
+        ParameterName = GearParameterName.Module;
+        Description = "Module";
+        LatexSymbol = LatexSymbols.Module;
+        LatexFormula = "";
+    }
 
-    public double Calculate(GearDataDictionary dataDictionary)
+    public double Calculate(GearDataParameters dataParameters)
     {
         throw new NotImplementedException();
     }
+
+    
 }

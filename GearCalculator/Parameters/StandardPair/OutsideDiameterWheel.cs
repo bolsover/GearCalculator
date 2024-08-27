@@ -1,20 +1,24 @@
-﻿using Bolsover.GearCalculator.Dictionary;
+﻿using System.Collections.Generic;
+using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
-public class OutsideDiameterWheel : IGearParameter
+public class OutsideDiameterWheel : GearParameter
 {
-
-    public string Name { get; set; } = "OutsideDiameterWheel";
-    public string Description { get; set; } = "OutsideDiameterWheel";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.OutsideDiameterWheel;
-    public string LatexFormula { get; set; } = LatexFormulae.OutsideDiameterWheel;
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public OutsideDiameterWheel()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethWheel, out var teethWheel);
+        ParameterName = GearParameterName.OutsideDiameterWheel;
+        Description = "Outside Diameter";
+
+        LatexSymbol = LatexSymbols.OutsideDiameterWheel;
+        LatexFormula = LatexFormulae.OutsideDiameterWheel;
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
+        var teethWheel = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel));
 
 
         var z2 = teethWheel.Value;

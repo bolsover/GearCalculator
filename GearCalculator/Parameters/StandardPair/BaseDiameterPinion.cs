@@ -1,23 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
 using static Bolsover.GearCalculator.Utils.ConversionUtils;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
-public class BaseDiameterPinion : IGearParameter
+public class BaseDiameterPinion : GearParameter
 {
-
-    public string Name { get; set; } = "BaseDiameterPinion";
-    public string Description { get; set; } = "BaseDiameterPinion";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.BaseDiameterPinion;
-    public string LatexFormula { get; set; } = LatexFormulae.BaseDiameterPinion;
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public BaseDiameterPinion()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethPinion, out var teethPinion);
-        dataDictionary.TryGetValue(GearParameterName.PressureAngle, out var pressureAngle);
+        ParameterName = GearParameterName.BaseDiameterPinion;
+        Description = "Base Diameter";
+
+        LatexSymbol = LatexSymbols.BaseDiameterPinion;
+        LatexFormula = LatexFormulae.BaseDiameterPinion;
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
+        var teethPinion = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion));
+        var pressureAngle =
+            parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.PressureAngle));
 
         var z1 = teethPinion.Value;
         var m = module.Value;

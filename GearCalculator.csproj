@@ -1,112 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
-            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{8FE461A1-FB43-422B-9068-EFA718DC6EBE}</ProjectGuid>
-        <OutputType>Library</OutputType>
-        <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Bolsover</RootNamespace>
-        <AssemblyName>GearCalculator</AssemblyName>
-        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-        <LangVersion>10</LangVersion>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="System"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Data"/>
-        <Reference Include="System.Xml"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="GearCalculator\Dictionary\GearDataDictionary.cs" />
-        <Compile Include="GearCalculator\Dictionary\GearParameterName.cs" />
-        <Compile Include="GearCalculator\Dictionary\LatexFormulae.cs" />
-        <Compile Include="GearCalculator\Dictionary\LatexSymbols.cs" />
-        <Compile Include="GearCalculator\Gear\IGear.cs" />
-        <Compile Include="GearCalculator\Gear\InvoluteSpurGear.cs" />
-        <Compile Include="GearCalculator\Gear\InvoluteSpurGearPair.cs" />
-        <Compile Include="GearCalculator\Gear\ProfileShiftedExtIntSpurGearPair.cs" />
-        <Compile Include="GearCalculator\Gear\ProfileShiftedExtSpurGearPair.cs" />
-        <Compile Include="GearCalculator\MissingParameterException.cs" />
-        <Compile Include="GearCalculator\Parameters\Inputs\Module.cs" />
-        <Compile Include="GearCalculator\Parameters\Inputs\PressureAngle.cs" />
-        <Compile Include="GearCalculator\Parameters\Inputs\Teeth.cs" />
-        <Compile Include="GearCalculator\Parameters\Inputs\TeethPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\Inputs\TeethWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\Inputs\WorkingCentreDistance.cs" />
-        <Compile Include="GearCalculator\Parameters\IGearParameter.cs" />
-        <Compile Include="GearCalculator\Parameters\Inputs\WorkingPitchDiameter.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEIPair\PseiDifferenceCoefficientProfileShift.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEIPair\PseiCentreDistanceIncrementFactor.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseAddendumPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseAddendumWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseCentreDistanceIncrementFactor.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseDedendumPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseDedendumWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseOutsideDiameterPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseOutsideDiameterWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseRootDiameterPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseRootDiameterWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseTotalContactRatio.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseWholeDepth.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseWorkingPitchDiameterPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\PseWorkingPitchDiameterWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\SumCoefficientProfileShift.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\WorkingInvoluteFunction.cs" />
-        <Compile Include="GearCalculator\Parameters\PSEPair\WorkingPressureAngle.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\BaseDiameterPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\BaseDiameterWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\CoefficientProfileShiftPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\CoefficientProfileShiftWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\OutsideDiameterPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\OutsideDiameterWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\PitchDiameterPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\PitchDiameterWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\RootDiameterPinion.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\RootDiameterWheel.cs" />
-        <Compile Include="GearCalculator\Parameters\StandardPair\StandardCentreDistance.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\Addendum.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\BaseDiameter.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\Dedendum.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\InvoluteFunction.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\OutsideDiameter.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\PitchDiameter.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\RootDiameter.cs" />
-        <Compile Include="GearCalculator\Parameters\Standard\WholeDepth.cs" />
-        <Compile Include="GearCalculator\Utils\ConversionUtils.cs" />
-        <Compile Include="Program.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FE461A1-FB43-422B-9068-EFA718DC6EBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bolsover</RootNamespace>
+    <AssemblyName>GearCalculator</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <LangVersion>10</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GearCalculator\Dictionary\GearDataParameters.cs" />
+    <Compile Include="GearCalculator\Dictionary\GearParameterName.cs" />
+    <Compile Include="GearCalculator\Dictionary\LatexFormulae.cs" />
+    <Compile Include="GearCalculator\Dictionary\LatexSymbols.cs" />
+    <Compile Include="GearCalculator\Gear\Gear.cs" />
+    <Compile Include="GearCalculator\Gear\InvoluteSpurGear.cs" />
+    <Compile Include="GearCalculator\Gear\InvoluteSpurGearPair.cs" />
+    <Compile Include="GearCalculator\Gear\ProfileShiftedExtIntSpurGearPair.cs" />
+    <Compile Include="GearCalculator\Gear\ProfileShiftExtPair.cs" />
+    <Compile Include="GearCalculator\MissingParameterException.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\Module.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\PressureAngle.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\Teeth.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\TeethPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\TeethWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\WorkingCentreDistance.cs" />
+    <Compile Include="GearCalculator\Parameters\GearParameter.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\WorkingPitchDiameter.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiAddendumPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiAddendumWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiDedendumPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiDedendumWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiDifferenceCoefficientProfileShift.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiCentreDistanceIncrementFactor.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiInvoluteFunction.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiStandardCentreDistance.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEIPair\PseiWorkingPressureAngle.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseAddendumPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseAddendumWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseCentreDistanceIncrementFactor.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseDedendumPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseDedendumWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseOutsideDiameterPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseOutsideDiameterWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseRootDiameterPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseRootDiameterWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseTotalContactRatio.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseWholeDepth.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseWorkingPitchDiameterPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\PseWorkingPitchDiameterWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\SumCoefficientProfileShift.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\WorkingInvoluteFunction.cs" />
+    <Compile Include="GearCalculator\Parameters\PSEPair\WorkingPressureAngle.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\BaseDiameterPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\BaseDiameterWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\CoefficientProfileShiftPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\CoefficientProfileShiftWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\OutsideDiameterPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\OutsideDiameterWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\PitchDiameterPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\PitchDiameterWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\RootDiameterPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\RootDiameterWheel.cs" />
+    <Compile Include="GearCalculator\Parameters\StandardPair\StandardCentreDistance.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\Addendum.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\BaseDiameter.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\Dedendum.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\InvoluteFunction.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\OutsideDiameter.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\PitchDiameter.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\RootDiameter.cs" />
+    <Compile Include="GearCalculator\Parameters\Standard\WholeDepth.cs" />
+    <Compile Include="GearCalculator\Utils\ConversionUtils.cs" />
+    <Compile Include="GearCalculator\Utils\SexagesimalAngle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
     </Target>
     <Target Name="AfterBuild">
     </Target>
     -->
-
 </Project>

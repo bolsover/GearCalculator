@@ -1,19 +1,24 @@
-﻿using Bolsover.GearCalculator.Dictionary;
+﻿using System.Collections.Generic;
+using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.Standard;
 
-public class Dedendum : IGearParameter
+public class Dedendum : GearParameter
 {
-    public string Name { get; set; } = "Dedendum";
-    public string Description { get; set; } = "Dedendum";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.Dedendum;
-    public string LatexFormula { get; set; } = LatexFormulae.Dedendum;
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public Dedendum()
     {
-        if (dataDictionary.TryGetValue(GearParameterName.Module, out var module)) return module.Value * 1.25;
+        ParameterName = GearParameterName.Dedendum;
+        Description = "Dedendum";
 
-        throw new MissingParameterException("Parameter Module is missing from dictionary");
+        LatexSymbol = LatexSymbols.Dedendum;
+        LatexFormula = LatexFormulae.Dedendum;
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
+
+        return module.Value * 1.25;
     }
 }

@@ -1,29 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
 using static Bolsover.GearCalculator.Utils.ConversionUtils;
 
 namespace Bolsover.GearCalculator.Parameters.PSEPair;
 
-public class WorkingInvoluteFunction : IGearParameter
+public class WorkingInvoluteFunction : GearParameter
 {
-    public string Name { get; set; } = "WorkingInvoluteFunction";
-    public string Description { get; set; } = "WorkingInvoluteFunction";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = @"inv\:\alpha_{w}";
-    public string LatexFormula { get; set; } = @"tan\alpha_{w} - \alpha_{w}";
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public WorkingInvoluteFunction()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethPinion, out var teethPinion);
-        dataDictionary.TryGetValue(GearParameterName.TeethWheel, out var teethWheel);
-        dataDictionary.TryGetValue(GearParameterName.WorkingCentreDistance, out var workingCentreDistance);
-        dataDictionary.TryGetValue(GearParameterName.PressureAngle, out var pressureAngle);
-        var alpha = Radians(pressureAngle.Value);
-        var z1 = teethPinion.Value;
-        var z2 = teethWheel.Value;
-        var m = module.Value;
-        var ax = workingCentreDistance.Value;
+        ParameterName = GearParameterName.WorkingInvoluteFunction;
+        Description = "Working Involute Function";
+
+        LatexSymbol = LatexSymbols.WorkingInvoluteFunction; // @"inv\:\alpha_{w}";
+        LatexFormula = LatexFormulae.WorkingInvoluteFunction; //@"tan\alpha_{w} - \alpha_{w}";
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var z1 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion)).Value;
+        var z2 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel)).Value;
+        var m = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module)).Value;
+        var ax = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.WorkingCentreDistance))
+            .Value;
+        var pressureAngle = parameters
+            .Find(parameter => parameter.ParameterName.Equals(GearParameterName.PressureAngle)).Value;
+
+        var alpha = Radians(pressureAngle);
 
         var y = ax / m - (z1 + z2) / 2; // centre distance increment factor
 

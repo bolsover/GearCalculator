@@ -8,7 +8,7 @@ public class ConsoleIo
     {
         Console.WriteLine(s);
     }
-        
+
     public string ReadLine()
     {
         return Console.ReadLine()!;

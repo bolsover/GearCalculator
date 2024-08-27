@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FB0888C-2958-4847-9256-0BA256E520FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bolsover</RootNamespace>
+    <AssemblyName>GearCalculatorUi</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <LangVersion>10</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GearCalculatorUi.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WpfMath, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfMath.2.1.0\lib\net462\WpfMath.dll</HintPath>
+    </Reference>
+    <Reference Include="XamlMath.Shared, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XamlMath.Shared.2.1.0\lib\net462\XamlMath.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GearCalculatorUi\Model\ProfileShiftExtPairModel.cs" />
+    <Compile Include="GearCalculatorUi\Model\SimpleGearModel.cs" />
+    <Compile Include="GearCalculatorUi\Model\StandardGearPairModel.cs" />
+    <Compile Include="GearCalculatorUi\Presenter\ProfileShiftGearPairPresenter.cs" />
+    <Compile Include="GearCalculatorUi\Presenter\SimpleGearPresenter.cs" />
+    <Compile Include="GearCalculatorUi\Presenter\StandardGearPairPresenter.cs" />
+    <Compile Include="GearCalculatorUi\Utils\LatexUtils.cs" />
+    <Compile Include="GearCalculatorUi\View\MainTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\MainTestForm.Designer.cs">
+      <DependentUpon>MainTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\ProfileShiftExtPairForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\ProfileShiftExtPairForm.Designer.cs">
+      <DependentUpon>ProfileShiftExtPairForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\ProfileShiftExtPairView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\ProfileShiftExtPairView.Designer.cs">
+      <DependentUpon>ProfileShiftExtPairView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\SimpleGearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\SimpleGearForm.Designer.cs">
+      <DependentUpon>SimpleGearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\SimpleGearView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\SimpleGearView.Designer.cs">
+      <DependentUpon>SimpleGearView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\StandardGearPairForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\StandardGearPairForm.Designer.cs">
+      <DependentUpon>StandardGearPairForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\StandardGearPairView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GearCalculatorUi\View\StandardGearPairView.Designer.cs">
+      <DependentUpon>StandardGearPairView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GearCalculatorUi\View\MainTestForm.resx">
+      <DependentUpon>MainTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GearCalculatorUi\View\ProfileShiftExtPairForm.resx">
+      <DependentUpon>ProfileShiftExtPairForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GearCalculatorUi\View\ProfileShiftExtPairView.resx">
+      <DependentUpon>ProfileShiftExtPairView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GearCalculatorUi\View\SimpleGearForm.resx">
+      <DependentUpon>SimpleGearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GearCalculatorUi\View\SimpleGearView.resx">
+      <DependentUpon>SimpleGearView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GearCalculatorUi\View\StandardGearPairForm.resx">
+      <DependentUpon>StandardGearPairForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GearCalculatorUi\View\StandardGearPairView.resx">
+      <DependentUpon>StandardGearPairView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GearCalculator.csproj">
+      <Project>{8fe461a1-fb43-422b-9068-efa718dc6ebe}</Project>
+      <Name>GearCalculator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

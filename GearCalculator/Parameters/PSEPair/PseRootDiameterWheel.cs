@@ -1,31 +1,33 @@
-﻿using Bolsover.GearCalculator.Dictionary;
+﻿using System.Collections.Generic;
+using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.PSEPair;
 
-public class PseRootDiameterWheel : IGearParameter
+public class PseRootDiameterWheel : GearParameter
 {
-    public string Name { get; set; } = "PseRootDiameterWheel";
-    public string Description { get; set; } = "PseRootDiameterWheel";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.RootDiameterWheel;
-    public string LatexFormula { get; set; } = @"d_{a2}-2h";
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public PseRootDiameterWheel()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethPinion, out var teethPinion);
-        dataDictionary.TryGetValue(GearParameterName.TeethWheel, out var teethWheel);
-        dataDictionary.TryGetValue(GearParameterName.WorkingCentreDistance, out var workingCentreDistance);
-        dataDictionary.TryGetValue(GearParameterName.CoefficientProfileShiftPinion,
-            out var coefficientProfileShiftPinion);
-        dataDictionary.TryGetValue(GearParameterName.CoefficientProfileShiftWheel,
-            out var coefficientProfileShiftWheel);
-        var z1 = teethPinion.Value;
-        var z2 = teethWheel.Value;
-        var m = module.Value;
-        var ax = workingCentreDistance.Value;
-        var x1 = coefficientProfileShiftPinion.Value;
-        var x2 = coefficientProfileShiftWheel.Value;
+        ParameterName = GearParameterName.PseRootDiameterWheel;
+        Description = "PseRootDiameterWheel";
+
+        LatexSymbol = LatexSymbols.RootDiameterWheel;
+        LatexFormula = @"d_{a2}-2h";
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var z1 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion)).Value;
+        var z2 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel)).Value;
+        var m = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module)).Value;
+        var ax = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.WorkingCentreDistance))
+            .Value;
+
+        var x1 = parameters.Find(parameter =>
+            parameter.ParameterName.Equals(GearParameterName.CoefficientProfileShiftPinion)).Value;
+        var x2 = parameters.Find(parameter =>
+            parameter.ParameterName.Equals(GearParameterName.CoefficientProfileShiftWheel)).Value;
+
 
         var y = ax / m - (z1 + z2) / 2;
 

@@ -1,31 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
 using static Bolsover.GearCalculator.Utils.ConversionUtils;
 
 
 namespace Bolsover.GearCalculator.Parameters.PSEPair;
 
-public class SumCoefficientProfileShift : IGearParameter
+public class SumCoefficientProfileShift : GearParameter
 {
-    public string Name { get; set; } = "SumCoefficientProfileShift";
-    public string Description { get; set; } = "SumCoefficientProfileShift";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.SumCoefficientOfProfileShift;
-
-    public string LatexFormula { get; set; } = LatexFormulae.SumCoefficientOfProfileShift;
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public SumCoefficientProfileShift()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethPinion, out var teethPinion);
-        dataDictionary.TryGetValue(GearParameterName.TeethWheel, out var teethWheel);
-        dataDictionary.TryGetValue(GearParameterName.WorkingCentreDistance, out var workingCentreDistance);
-        dataDictionary.TryGetValue(GearParameterName.PressureAngle, out var pressureAngle);
-        var alpha = Radians(pressureAngle.Value);
-        var z1 = teethPinion.Value;
-        var z2 = teethWheel.Value;
-        var m = module.Value;
-        var ax = workingCentreDistance.Value;
+        ParameterName = GearParameterName.SumCoefficientProfileShift;
+        Description = "Sum Coefficient Profile Shift";
+
+        LatexSymbol = LatexSymbols.SumCoefficientOfProfileShift;
+
+        LatexFormula = LatexFormulae.SumCoefficientOfProfileShift;
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var z1 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion)).Value;
+        var z2 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel)).Value;
+        var m = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module)).Value;
+        var ax = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.WorkingCentreDistance))
+            .Value;
+        var pressureAngle = parameters
+            .Find(parameter => parameter.ParameterName.Equals(GearParameterName.PressureAngle)).Value;
+
+        var alpha = Radians(pressureAngle);
+
 
         var y = ax / m - (z1 + z2) / 2;
         var invAlpha = Math.Tan(alpha) - alpha;

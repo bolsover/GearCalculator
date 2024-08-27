@@ -1,20 +1,24 @@
-﻿using Bolsover.GearCalculator.Dictionary;
+﻿using System.Collections.Generic;
+using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
-public class RootDiameterWheel : IGearParameter
+public class RootDiameterWheel : GearParameter
 {
-    public string Name { get; set; } = "RootDiameterWheel";
-    public string Description { get; set; } = "RootDiameterWheel";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = @"d_{f2}";
-    public string LatexFormula { get; set; } = @"d{2}-2.5m";
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public RootDiameterWheel()
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethWheel, out var teethWheel);
+        ParameterName = GearParameterName.RootDiameterWheel;
+        Description = "Root Diameter";
 
+        LatexSymbol = LatexSymbols.RootDiameterWheel; // @"d_{f2}";
+        LatexFormula = LatexFormulae.RootDiameterWheel; //@"d{2}-2.5m";
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
+        var teethWheel = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel));
 
         var z2 = teethWheel.Value;
         var m = module.Value;

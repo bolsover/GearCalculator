@@ -1,0 +1,82 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0888C-2958-4847-9256-0BA256E520FE}|GearCalculatorUi\\GearCalculatorUi.csproj|D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\gearcalculatorui\\gearcalculatorui\\view\\profileshiftextpairview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3FB0888C-2958-4847-9256-0BA256E520FE}|GearCalculatorUi\\GearCalculatorUi.csproj|solutionrelative:gearcalculatorui\\gearcalculatorui\\view\\profileshiftextpairview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0888C-2958-4847-9256-0BA256E520FE}|GearCalculatorUi\\GearCalculatorUi.csproj|D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\gearcalculatorui\\gearcalculatorui\\presenter\\profileshiftgearpairpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0888C-2958-4847-9256-0BA256E520FE}|GearCalculatorUi\\GearCalculatorUi.csproj|solutionrelative:gearcalculatorui\\gearcalculatorui\\presenter\\profileshiftgearpairpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FE461A1-FB43-422B-9068-EFA718DC6EBE}|GearCalculator.csproj|D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\gearcalculator\\gear\\profileshiftextpair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FE461A1-FB43-422B-9068-EFA718DC6EBE}|GearCalculator.csproj|solutionrelative:gearcalculator\\gear\\profileshiftextpair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfileShiftExtPair.cs",
+              "DocumentMoniker": "D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\GearCalculator\\Gear\\ProfileShiftExtPair.cs",
+              "RelativeDocumentMoniker": "GearCalculator\\Gear\\ProfileShiftExtPair.cs",
+              "ToolTip": "D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\GearCalculator\\Gear\\ProfileShiftExtPair.cs",
+              "RelativeToolTip": "GearCalculator\\Gear\\ProfileShiftExtPair.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAQwH8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T10:56:03.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfileShiftGearPairPresenter.cs",
+              "DocumentMoniker": "D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\GearCalculatorUi\\GearCalculatorUi\\Presenter\\ProfileShiftGearPairPresenter.cs",
+              "RelativeDocumentMoniker": "GearCalculatorUi\\GearCalculatorUi\\Presenter\\ProfileShiftGearPairPresenter.cs",
+              "ToolTip": "D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\GearCalculatorUi\\GearCalculatorUi\\Presenter\\ProfileShiftGearPairPresenter.cs",
+              "RelativeToolTip": "GearCalculatorUi\\GearCalculatorUi\\Presenter\\ProfileShiftGearPairPresenter.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAAABsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T10:38:30.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfileShiftExtPairView.cs [Design]",
+              "DocumentMoniker": "D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\GearCalculatorUi\\GearCalculatorUi\\View\\ProfileShiftExtPairView.cs",
+              "RelativeDocumentMoniker": "GearCalculatorUi\\GearCalculatorUi\\View\\ProfileShiftExtPairView.cs",
+              "ToolTip": "D:\\02_Repository\\02_Bolsover\\26_GearCalculator\\GearCalculatorUi\\GearCalculatorUi\\View\\ProfileShiftExtPairView.cs [Design]",
+              "RelativeToolTip": "GearCalculatorUi\\GearCalculatorUi\\View\\ProfileShiftExtPairView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T10:37:35.858Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

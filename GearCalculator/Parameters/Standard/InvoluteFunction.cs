@@ -1,22 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
 using static Bolsover.GearCalculator.Utils.ConversionUtils;
 
 
 namespace Bolsover.GearCalculator.Parameters.Standard;
 
-public class InvoluteFunction : IGearParameter
+public class InvoluteFunction : GearParameter
 {
-    public string Name { get; set; } = "InvoluteFunction";
-    public string Description { get; set; } = "InvoluteFunction";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.InvoluteFunction; //@"inv\:\alpha";
-    public string LatexFormula { get; set; } = LatexFormulae.InvoluteFunction;
-
-    public double Calculate(GearDataDictionary dataDictionary)
+    public InvoluteFunction()
     {
-        dataDictionary.TryGetValue(GearParameterName.PressureAngle, out var pressureAngle);
-        var alpha = Radians(pressureAngle.Value);
+        ParameterName = GearParameterName.InvoluteFunction;
+        Description = "Involute Function";
+
+        LatexSymbol = LatexSymbols.InvoluteFunction; //@"inv\:\alpha";
+        LatexFormula = LatexFormulae.InvoluteFunction;
+    }
+
+
+    public double Calculate(List<GearParameter> parameters)
+    {
+        var pressureAngle = parameters
+            .Find(parameter => parameter.ParameterName.Equals(GearParameterName.PressureAngle)).Value;
+
+        var alpha = Radians(pressureAngle);
         return Math.Tan(alpha) - alpha;
     }
 }

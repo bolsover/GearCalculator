@@ -1,39 +1,43 @@
 ﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
 using static Bolsover.GearCalculator.Utils.ConversionUtils;
 
 namespace Bolsover.GearCalculator.Parameters.PSEPair;
 
-public class PseTotalContactRatio : IGearParameter
+public class PseTotalContactRatio : GearParameter
 {
-    public string Name { get; set; } = "PseTotalContactRatio";
-    public string Description { get; set; } = "PseTotalContactRatio";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = "d\\epsilon_{\\gamma}";
+    public PseTotalContactRatio()
+    {
+        ParameterName = GearParameterName.PseTotalContactRatio;
+        Description = "PseTotalContactRatio";
 
-    public string LatexFormula { get; set; } =
-        @"\frac{\sqrt{\left(\frac{d_{a1}}{2}\right)^{2} - \left(\frac{d_{b1}}{2}\right)^{2}} +
+        LatexSymbol = LatexSymbols.TotalContactRatio; 
+
+        LatexFormula =
+            @"\frac{\sqrt{\left(\frac{d_{a1}}{2}\right)^{2} - \left(\frac{d_{b1}}{2}\right)^{2}} +
             \sqrt{\left(\frac{d_{a2}}{2}\right)^{2} - \left(\frac{d_{b2}}{2}\right)^{2}} -
             a_{x} \cdot sin \alpha_{w}}{\pi \cdot m \cdot cos\alpha}";
+    }
 
-    public double Calculate(GearDataDictionary dataDictionary)
+
+    public double Calculate(List<GearParameter> parameters)
     {
-        dataDictionary.TryGetValue(GearParameterName.Module, out var module);
-        dataDictionary.TryGetValue(GearParameterName.TeethPinion, out var teethPinion);
-        dataDictionary.TryGetValue(GearParameterName.TeethWheel, out var teethWheel);
-        dataDictionary.TryGetValue(GearParameterName.WorkingCentreDistance, out var workingCentreDistance);
-        dataDictionary.TryGetValue(GearParameterName.PressureAngle, out var pressureAngle);
-        dataDictionary.TryGetValue(GearParameterName.CoefficientProfileShiftWheel,
-            out var coefficientProfileShiftWheel);
-        dataDictionary.TryGetValue(GearParameterName.CoefficientProfileShiftPinion,
-            out var coefficientProfileShiftPinion);
-        var alpha = Radians(pressureAngle.Value); //pressure angle in radians
-        var z1 = teethPinion.Value;
-        var z2 = teethWheel.Value;
-        var m = module.Value;
-        var ax = workingCentreDistance.Value;
-        var x2 = coefficientProfileShiftWheel.Value;
-        var x1 = coefficientProfileShiftPinion.Value;
+        var z1 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion)).Value;
+        var z2 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel)).Value;
+        var m = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module)).Value;
+        var ax = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.WorkingCentreDistance))
+            .Value;
+        var pressureAngle = parameters
+            .Find(parameter => parameter.ParameterName.Equals(GearParameterName.PressureAngle)).Value;
+        var x1 = parameters.Find(parameter =>
+            parameter.ParameterName.Equals(GearParameterName.CoefficientProfileShiftPinion)).Value;
+        var x2 = parameters.Find(parameter =>
+            parameter.ParameterName.Equals(GearParameterName.CoefficientProfileShiftWheel)).Value;
+
+
+        var alpha = Radians(pressureAngle); //pressure angle in radians
+
 
         var y = ax / m - (z1 + z2) / 2; // centre distance increment factor
         var alphaW =

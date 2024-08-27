@@ -1,5 +1,4 @@
-﻿using Bolsover.GearCalculator.Dictionary;
-using Bolsover.GearCalculator.Gear;
+﻿using Bolsover.GearCalculator.Gear;
 using NUnit.Framework;
 
 namespace UnitTests.GearTests;
@@ -7,65 +6,56 @@ namespace UnitTests.GearTests;
 [TestFixture]
 public class InvoluteSpurGearTests
 {
-    private static readonly InvoluteSpurGear Gear = new();
-  
-
     [SetUp]
     public void SetUp()
     {
-        var module = Gear.DataDictionary.RetrieveByName(GearParameterName.Module);
-        module.Value = 2.5d;
-        var teeth = Gear.DataDictionary.RetrieveByName(GearParameterName.Teeth);
-        teeth.Value = 18;
-        var pressureAngle = Gear.DataDictionary.RetrieveByName(GearParameterName.PressureAngle);
-        pressureAngle.Value = 20;
+        Gear.Module.Value = 2.5d;
+        Gear.Teeth.Value = 18;
+        Gear.PressureAngle.Value = 20;
+        Gear.Calculate();
     }
-    
+
     [TearDown]
     public void TearDown()
     {
     }
 
+    private static readonly InvoluteSpurGear Gear = new();
 
-    private static double RetrieveGearValue(GearParameterName name)
-    {
-        Gear.Calculate();
-        return Gear.DataDictionary.RetrieveByName(name).Value;
-    }
 
     [Test]
     public void TestPitchDiameter()
     {
-        Assert.That(45d, Is.EqualTo(RetrieveGearValue(GearParameterName.PitchDiameter)));
+        Assert.That(Gear.PitchDiameter.Value, Is.EqualTo(45d));
     }
 
     [Test]
     public void TestBaseDiameter()
     {
-        Assert.That(42.286d, Is.EqualTo(RetrieveGearValue(GearParameterName.BaseDiameter)).Within(0.1d));
+        Assert.That(Gear.BaseDiameter.Value, Is.EqualTo(42.286d).Within(0.1d));
     }
 
     [Test]
     public void TestAddendum()
     {
-        Assert.That(2.5d, Is.EqualTo(RetrieveGearValue(GearParameterName.Addendum)));
+        Assert.That(Gear.Addendum.Value, Is.EqualTo(2.5d));
     }
 
     [Test]
     public void TestDedendum()
     {
-        Assert.That(3.125d, Is.EqualTo(RetrieveGearValue(GearParameterName.Dedendum)));
+        Assert.That(Gear.Dedendum.Value, Is.EqualTo(3.125d));
     }
 
     [Test]
     public void TestOutsideDiameter()
     {
-        Assert.That(50.0d, Is.EqualTo(RetrieveGearValue(GearParameterName.OutsideDiameter)));
+        Assert.That(Gear.OutsideDiameter.Value, Is.EqualTo(50.0d));
     }
 
     [Test]
     public void TestRootDiameter()
     {
-        Assert.That(38.75d, Is.EqualTo(RetrieveGearValue(GearParameterName.RootDiameter)));
+        Assert.That(Gear.RootDiameter.Value, Is.EqualTo(38.75d));
     }
 }

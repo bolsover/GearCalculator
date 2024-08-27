@@ -3,15 +3,17 @@ using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
-public class PressureAngle : IGearParameter
+public class PressureAngle : GearParameter
 {
-    public string Name { get; set; } = "PressureAngle";
-    public string Description { get; set; } = "PressureAngle";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = @"\alpha";
-    public string LatexFormula { get; set; } = "";
+    public PressureAngle()
+    {
+        ParameterName = GearParameterName.PressureAngle;
+        Description = "Pressure Angle";
+        LatexSymbol = LatexSymbols.PressureAngle; //@"\alpha";
+        LatexFormula = LatexFormulae.PressureAngle;
+    }
 
-    public double Calculate(GearDataDictionary dataDictionary)
+    public double Calculate(GearDataParameters dataParameters)
     {
         throw new NotImplementedException();
     }

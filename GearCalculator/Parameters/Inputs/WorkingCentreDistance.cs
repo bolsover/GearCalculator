@@ -3,15 +3,19 @@ using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
-public class WorkingCentreDistance : IGearParameter
+public class WorkingCentreDistance : GearParameter
 {
-    public string Name { get; set; } = "WorkingCentreDistance";
-    public string Description { get; set; } = "WorkingCentreDistance";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = LatexSymbols.WorkingCentreDistance;
-    public string LatexFormula { get; set; } = @"";
+    public WorkingCentreDistance()
+    {
+        ParameterName = GearParameterName.WorkingCentreDistance;
+        Description = "Working Centre Distance";
 
-    public double Calculate(GearDataDictionary dataDictionary)
+        LatexSymbol = LatexSymbols.WorkingCentreDistance;
+        LatexFormula = @"";
+    }
+
+
+    public double Calculate(GearDataParameters dataParameters)
     {
         throw new NotImplementedException();
     }

@@ -3,15 +3,17 @@ using Bolsover.GearCalculator.Dictionary;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
-public class TeethWheel : IGearParameter
+public class TeethWheel : GearParameter
 {
-    public string Name { get; set; } = "TeethWheel";
-    public string Description { get; set; } = "Teeth Wheel";
-    public double Value { get; set; }
-    public string LatexSymbol { get; set; } = "z_{2}";
-    public string LatexFormula { get; set; } = "";
+    public TeethWheel()
+    {
+        ParameterName = GearParameterName.TeethWheel;
+        Description = "Teeth";
+        LatexSymbol = LatexSymbols.TeethWheel;
+        LatexFormula = "";
+    }
 
-    public double Calculate(GearDataDictionary dataDictionary)
+    public double Calculate(GearDataParameters dataParameters)
     {
         throw new NotImplementedException();
     }

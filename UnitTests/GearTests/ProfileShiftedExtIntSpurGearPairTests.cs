@@ -1,6 +1,4 @@
-﻿
-using Bolsover.GearCalculator.Dictionary;
-using Bolsover.GearCalculator.Gear;
+﻿using Bolsover.GearCalculator.Gear;
 using NUnit.Framework;
 
 namespace UnitTests.GearTests;
@@ -8,50 +6,109 @@ namespace UnitTests.GearTests;
 [TestFixture]
 public class ProfileShiftedExtIntSpurGearPairTests
 {
-    private static readonly ProfileShiftedExtIntSpurGearPair Gear = new();
-    
-
     [SetUp]
     public void SetUp()
     {
-        var module = Gear.DataDictionary .RetrieveByName(GearParameterName.Module);
-        module.Value = 3d;
-           
-        var teethPinion = Gear.DataDictionary .RetrieveByName(GearParameterName.TeethPinion);
-        teethPinion.Value = 16;
-        var teethWheel = Gear.DataDictionary .RetrieveByName(GearParameterName.TeethWheel);
-        teethWheel.Value = 24;
-        var pressureAngle = Gear.DataDictionary .RetrieveByName(GearParameterName.PressureAngle);
-        pressureAngle.Value = 20;
-        var workingCentreDistance = Gear.DataDictionary .RetrieveByName(GearParameterName.WorkingCentreDistance);
-        workingCentreDistance.Value = 13.1683d;
-        var coefficientProfileShiftPinion =
-            Gear.DataDictionary .RetrieveByName(GearParameterName.CoefficientProfileShiftPinion);
-        coefficientProfileShiftPinion.Value = 0.0d;
-        var coefficientProfileShiftWheel =
-            Gear.DataDictionary .RetrieveByName(GearParameterName.CoefficientProfileShiftWheel);
-        coefficientProfileShiftWheel.Value = 0.50d;
+        Gear.Module.Value = 3d;
+        Gear.TeethPinion.Value = 16;
+        Gear.TeethWheel.Value = 24;
+        Gear.PressureAngle.Value = 20;
+        Gear.WorkingCentreDistance.Value = 13.1683d;
+        Gear.CoefficientProfileShiftPinion.Value = 0.0d;
+        Gear.CoefficientProfileShiftWheel.Value = 0.50d;
+        Gear.Calculate();
     }
-    
+
     [TearDown]
     public void TearDown()
     {
     }
 
+    private static readonly ProfileShiftedExtIntSpurGearPair Gear = new();
 
-    private static double RetrieveGearValue(GearParameterName name)
+    [Test]
+    public void TestPseiWorkingPressureAngle()
     {
-        Gear.Calculate();
-        return Gear.DataDictionary.RetrieveByName(name).Value;
+        Assert.That(Gear.PseiWorkingPressureAngle.Value, Is.EqualTo(31.09385d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestPseiInvoluteFunction()
+    {
+        Assert.That(Gear.PseiInvoluteFunction.Value, Is.EqualTo(0.06040d).Within(0.0001d));
     }
 
     [Test]
     public void TestDifferenceCoefficientProfileShift()
     {
-        Assert.That(0.500d, Is.EqualTo(RetrieveGearValue(GearParameterName.PseiDifferenceCoefficientProfileShift)).Within(0.0001d));
+        Assert.That(Gear.PseiDifferenceCoefficientProfileShift.Value, Is.EqualTo(0.5000d).Within(0.0001d));
     }
 
-   
-    
-    
+    [Test]
+    public void TestBaseDiameterPinion()
+    {
+        Assert.That(Gear.BaseDiameterPinion.Value, Is.EqualTo(45.1052d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestBaseDiameterWheel()
+    {
+        Assert.That(Gear.BaseDiameterWheel.Value, Is.EqualTo(67.6578d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestPseiStandardCentreDistance()
+    {
+        Assert.That(Gear.PseiStandardCentreDistance.Value, Is.EqualTo(12.000d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestPseiCentreDistanceIncrementFactor()
+    {
+        Assert.That(Gear.PseiCentreDistanceIncrementFactor.Value, Is.EqualTo(0.3894d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestInvoluteFunction()
+    {
+        Assert.That(Gear.PseiInvoluteFunction.Value, Is.EqualTo(0.06040d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestPitchDiameterPinion()
+    {
+        Assert.That(Gear.PitchDiameterPinion.Value, Is.EqualTo(48.000d).Within(0.0001d));
+    }
+
+
+    [Test]
+    public void TestPitchDiameterWheel()
+    {
+        Assert.That(Gear.PitchDiameterWheel.Value, Is.EqualTo(72.000d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestPseiAddendumPinion()
+    {
+        Assert.That(Gear.PseiAddendumPinion.Value, Is.EqualTo(3.000d).Within(0.0001d));
+    }
+
+
+    [Test]
+    public void TestPseAddendumWheel()
+    {
+        Assert.That(Gear.PseiAddendumWheel.Value, Is.EqualTo(1.500d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestPseiDedendumPinion()
+    {
+        Assert.That(Gear.PseiDedendumPinion.Value, Is.EqualTo(3.75d).Within(0.0001d));
+    }
+
+    [Test]
+    public void TestPseiDedendumWheel()
+    {
+        Assert.That(Gear.PseiDedendumWheel.Value, Is.EqualTo(5.25d).Within(0.0001d));
+    }
 }
