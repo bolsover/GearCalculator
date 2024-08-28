@@ -18,7 +18,13 @@ public class WorkingPressureAngle : GearParameter
     }
 
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = Value;
+    }
+    
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var z1 = parameters.TeethPinion.Value;
         var z2 = parameters.TeethWheel.Value;

@@ -16,9 +16,15 @@ public class InvoluteFunction : GearParameter
         LatexSymbol = LatexSymbols.InvoluteFunction; //@"inv\:\alpha";
         LatexFormula = LatexFormulae.InvoluteFunction;
     }
+    
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        // ImperialValue = CalcImperial(Value);
+    }
 
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var pressureAngle = parameters.PressureAngle.Value;
         var alpha = Radians(pressureAngle);

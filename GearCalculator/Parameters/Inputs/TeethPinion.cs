@@ -1,5 +1,6 @@
 ﻿using System;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
@@ -9,13 +10,13 @@ public class TeethPinion : GearParameter
     {
         ParameterName = GearParameterName.TeethPinion;
         Description = "Teeth";
-
         LatexSymbol = LatexSymbols.TeethPinion;
         LatexFormula = "";
     }
 
-    // public double Calculate(GearDataParameters dataParameters)
-    // {
-    //     throw new NotImplementedException();
-    // }
+   
+    public void Calc(CalculationParameters calculationParameters)
+    {
+        ImperialValue = Value;
+    }
 }

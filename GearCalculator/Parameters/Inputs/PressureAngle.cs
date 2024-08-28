@@ -1,5 +1,6 @@
 ﻿using System;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
@@ -13,8 +14,11 @@ public class PressureAngle : GearParameter
         LatexFormula = LatexFormulae.PressureAngle;
     }
 
-    // public double Calculate(GearDataParameters dataParameters)
-    // {
-    //     throw new NotImplementedException();
-    // }
+    public void Calc(CalculationParameters parameters)
+    {
+       
+        ImperialValue = Value;
+      
+    }
+    
 }

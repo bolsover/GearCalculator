@@ -16,8 +16,13 @@ public class OutsideDiameterPinion : GearParameter
         LatexFormula = LatexFormulae.OutsideDiameterPinion;
     }
 
-
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
+    
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z1 = parameters.TeethPinion.Value;

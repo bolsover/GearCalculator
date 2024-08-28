@@ -11,10 +11,17 @@ public class Addendum : GearParameter
     {
         ParameterName = GearParameterName.Addendum;
         Description = "Addendum";
-
         LatexSymbol = LatexSymbols.Addendum;
         LatexFormula = LatexFormulae.Addendum;
     }
+    
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
 
-  public readonly Func<CalculationParameters, double> Calculate = (parameters) => parameters.Module.Value;
+
+
+  public readonly Func<CalculationParameters, double> CalcValue = (parameters) => parameters.Module.Value;
 }

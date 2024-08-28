@@ -16,11 +16,11 @@ public class Dedendum : GearParameter
         LatexFormula = LatexFormulae.Dedendum;
     }
 
-
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public void Calc(CalculationParameters parameters)
     {
-        return parameters.Module.Value * 1.25;
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
 
-     
-    };
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) => parameters.Module.Value * 1.25;
 }

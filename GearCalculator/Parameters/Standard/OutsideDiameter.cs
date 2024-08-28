@@ -16,8 +16,13 @@ public class OutsideDiameter : GearParameter
         LatexFormula = LatexFormulae.OutsideDiameter; //@"d+2m";
     }
 
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z = parameters.Teeth.Value;

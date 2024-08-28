@@ -16,7 +16,13 @@ public class PseiCentreDistanceIncrementFactor : GearParameter
         LatexFormula = LatexFormulae.ProfileShiftExtIntCentreDistanceIncrementFactor;
     }
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+       // ImperialValue = CalcImperial(Value);
+    }
+    
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var z1 = parameters.TeethPinion.Value;
         var z2 = parameters.TeethWheel.Value;

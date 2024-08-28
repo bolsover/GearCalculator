@@ -1,5 +1,6 @@
 ﻿using System;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
@@ -13,5 +14,12 @@ public class Module : GearParameter
         LatexFormula = "";
     }
 
+    
+    public void Calc(CalculationParameters parameters)
+    {
+       
+        ImperialValue = 25.4/Value;
+      
+    }
 
 }

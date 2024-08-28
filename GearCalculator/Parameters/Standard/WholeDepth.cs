@@ -15,6 +15,11 @@ public class WholeDepth : GearParameter
         LatexFormula = @"2.25m";
     }
 
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) => parameters.Module.Value * 2.25;
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) => parameters.Module.Value * 2.25;
 }

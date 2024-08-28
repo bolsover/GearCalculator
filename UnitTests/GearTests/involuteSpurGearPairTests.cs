@@ -27,66 +27,66 @@ public class InvoluteSpurGearPairTests
     [Test]
     public void TestPitchDiameterPinion()
     {
-        Assert.That(45.0d, Is.EqualTo(Gear.PitchDiameterPinion.Value));
+        Assert.That(Gear.PitchDiameterPinion.Value, Is.EqualTo(45.0d));
     }
 
     [Test]
     public void TestPitchDiameterWheel()
     {
-        Assert.That(62.5d, Is.EqualTo(Gear.PitchDiameterWheel.Value));
+        Assert.That(Gear.PitchDiameterWheel.Value, Is.EqualTo(62.5d));
     }
 
     [Test]
     public void TestBaseDiameterPinion()
     {
-        Assert.That(42.286d, Is.EqualTo(Gear.BaseDiameterPinion.Value).Within(0.001d));
+        Assert.That(Gear.BaseDiameterPinion.Value , Is.EqualTo(42.286d).Within(0.001d));
     }
 
     [Test]
     public void TestBaseDiameterWheel()
     {
-        Assert.That(58.731d, Is.EqualTo(Gear.BaseDiameterWheel.Value).Within(0.001d));
+        Assert.That(Gear.BaseDiameterWheel.Value , Is.EqualTo(58.731d).Within(0.001d));
     }
 
     [Test]
     public void TestAddendum()
     {
-        Assert.That(2.5d, Is.EqualTo(Gear.Addendum.Value));
+        Assert.That(Gear.Addendum.Value, Is.EqualTo(2.5d));
     }
 
     [Test]
     public void TestDedendum()
     {
-        Assert.That(3.125d, Is.EqualTo(Gear.Dedendum.Value));
+        Assert.That(Gear.Dedendum.Value, Is.EqualTo( 3.125d));
     }
 
     [Test]
     public void TestOutsideDiameterPinion()
     {
-        Assert.That(50.0d, Is.EqualTo(Gear.OutsideDiameterPinion.Value));
+        Assert.That(Gear.OutsideDiameterPinion.Value , Is.EqualTo(50.0d));
     }
 
     [Test]
     public void TestOutsideDiameterWheel()
     {
-        Assert.That(67.5d, Is.EqualTo(Gear.OutsideDiameterWheel.Value));
+        Assert.That(Gear.OutsideDiameterWheel.Value, Is.EqualTo( 67.5d));
     }
 
     [Test]
     public void TestRootDiameterPinion()
     {
-        Assert.That(38.75d, Is.EqualTo(Gear.RootDiameterPinion.Value));
+        Assert.That(Gear.RootDiameterPinion.Value , Is.EqualTo(38.75d));
     }
 
     [Test]
     public void TestRootDiameterWheel()
     {
-        Assert.That(56.25d, Is.EqualTo(Gear.RootDiameterWheel.Value));
+        Assert.That(Gear.RootDiameterWheel.Value, Is.EqualTo(56.25d));
     }
 
     [Test]
     public void TestStandardCentreDistance()
     {
-        Assert.That(53.75d, Is.EqualTo(Gear.StandardCentreDistance.Value));
+        Assert.That(Gear.StandardCentreDistance.Value, Is.EqualTo( 53.75d));
     }
 }

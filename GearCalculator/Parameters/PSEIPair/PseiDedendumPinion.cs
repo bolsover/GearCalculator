@@ -16,7 +16,13 @@ public class PseiDedendumPinion : GearParameter
     }
 
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
+    
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var x1 = parameters.CoefficientProfileShiftPinion.Value;

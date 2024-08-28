@@ -16,9 +16,15 @@ public class BaseDiameterWheel : GearParameter
         LatexSymbol = LatexSymbols.BaseDiameterWheel;
         LatexFormula = LatexFormulae.BaseDiameterWheel;
     }
+    
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
 
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z2 = parameters.TeethWheel.Value;

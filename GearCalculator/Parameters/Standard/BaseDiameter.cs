@@ -12,13 +12,18 @@ public class BaseDiameter : GearParameter
     {
         ParameterName = GearParameterName.BaseDiameter;
         Description = "Base Diameter";
-
         LatexSymbol = LatexSymbols.BaseDiameter;
         LatexFormula = LatexFormulae.BaseDiameter;
     }
 
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
 
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z = parameters.Teeth.Value;
@@ -26,4 +31,7 @@ public class BaseDiameter : GearParameter
 
         return z * m * Math.Cos(Radians(a));
     };
+    
+    
+    
 }

@@ -15,16 +15,13 @@ public class PitchDiameter : GearParameter
         LatexFormula = LatexFormulae.PitchDiameter;
     }
 
-
-    // public readonly Func<List<GearParameter>, double> Calculate = (parameters) =>
-    // {
-    //     var m = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module)).Value;
-    //     var z = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Teeth)).Value;
-    //
-    //     return z * m;
-    // };
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+       ImperialValue = CalcImperial(Value);
+    }
     
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z = parameters.Teeth.Value;

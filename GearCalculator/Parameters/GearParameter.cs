@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Bolsover.GearCalculator.Dictionary;
@@ -49,7 +50,7 @@ public class GearParameter : INotifyPropertyChanged
     public string LatexSymbol { get; set; }
     public string LatexFormula { get; set; }
 
-    
+    public readonly Func<double, double> CalcImperial = (value) => value / 25.4;
 
 
     public event PropertyChangedEventHandler PropertyChanged;

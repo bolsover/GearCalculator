@@ -16,8 +16,13 @@ public class PitchDiameterWheel : GearParameter
         LatexFormula = LatexFormulae.PitchDiameterWheel; //@"z_{2}m";
     }
 
-
-    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
+    public void Calc(CalculationParameters parameters)
+    {
+        Value = CalcValue(parameters);
+        ImperialValue = CalcImperial(Value);
+    }
+    
+    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z2 = parameters.TeethWheel.Value;
