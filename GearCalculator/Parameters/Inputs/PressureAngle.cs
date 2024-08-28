@@ -1,6 +1,7 @@
 ﻿using System;
 using Bolsover.GearCalculator.Dictionary;
 using Bolsover.GearCalculator.Gear;
+using Bolsover.GearCalculatorUi.Utils;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
@@ -18,6 +19,7 @@ public class PressureAngle : GearParameter
     {
        
         ImperialValue = Value;
+        AltStringValue = SexagesimalAngle.FromDouble(Value).ToString();
       
     }
     

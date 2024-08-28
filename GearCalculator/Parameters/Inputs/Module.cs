@@ -19,6 +19,8 @@ public class Module : GearParameter
     {
        
         ImperialValue = 25.4/Value;
+        Notes = "DP = Diametral Pitch, CP = Circular Pitch";
+        AltValue = Math.PI / (25.4 / Value);
       
     }
 

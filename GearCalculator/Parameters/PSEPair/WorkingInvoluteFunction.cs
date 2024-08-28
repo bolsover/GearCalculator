@@ -19,11 +19,11 @@ public class WorkingInvoluteFunction : GearParameter
 
     public void Calc(CalculationParameters parameters)
     {
-        Value = CalcValue(parameters);
-    //    ImperialValue = CalcImperial(Value);
+        Value = _calcValue(parameters);
+    
     }
     
-    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
+    private readonly Func<CalculationParameters, double> _calcValue = (parameters) =>
     {
         var z1 = parameters.TeethPinion.Value;
         var z2 = parameters.TeethWheel.Value;

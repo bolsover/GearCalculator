@@ -19,11 +19,11 @@ public class PseiDifferenceCoefficientProfileShift : GearParameter
 
     public void Calc(CalculationParameters parameters)
     {
-        Value = CalcValue(parameters);
-     //   ImperialValue = CalcImperial(Value);
+        Value = _calcValue(parameters);
+    
     }
     
-    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
+    private readonly Func<CalculationParameters, double> _calcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z1 = parameters.TeethPinion.Value;

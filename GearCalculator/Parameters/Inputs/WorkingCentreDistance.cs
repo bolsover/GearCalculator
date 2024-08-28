@@ -1,5 +1,6 @@
 ﻿using System;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.Inputs;
 
@@ -14,9 +15,9 @@ public class WorkingCentreDistance : GearParameter
         LatexFormula = @"";
     }
 
-
-    // public double Calculate(GearDataParameters dataParameters)
-    // {
-    //     throw new NotImplementedException();
-    // }
+    public void Calc(CalculationParameters calculationParameters)
+    {
+        ImperialValue = Value;
+    }
+   
 }

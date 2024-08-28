@@ -35,7 +35,7 @@ public enum GearParameterName
 
     WorkingPitchDiameter,
     WholeDepth,
-    TotalContactRatio,
+    
 
 
     PseAddendumPinion,
@@ -49,6 +49,8 @@ public enum GearParameterName
     PseWholeDepth,
     PseWorkingPitchDiameterPinion,
     PseWorkingPitchDiameterWheel,
+    
+    TotalContactRatio,
     PseTotalContactRatio,
     PseCentreDistanceIncrementFactor,
 

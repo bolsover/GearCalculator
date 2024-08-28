@@ -60,83 +60,83 @@ public class ProfileShiftExtPairTests
     [Test]
     public void TestCentreDistanceIncrementFactor()
     {
-        Assert.That(Gear.PseCentreDistanceIncrementFactor.Value, Is.EqualTo( 0.83333d).Within(0.0001d));
+        Assert.That(Gear.CentreDistanceIncrementFactor.Value, Is.EqualTo( 0.83333d).Within(0.0001d));
     }
 
 
     [Test]
     public void TestPseAddendumPinion()
     {
-        Assert.That(Gear.PseAddendumPinion.Value, Is.EqualTo( 4.41999).Within(0.0001d));
+        Assert.That(Gear.AddendumPinion.Value, Is.EqualTo( 4.41999).Within(0.0001d));
     }
 
 
     [Test]
     public void TestPseAddendumWheel()
     {
-        Assert.That(Gear.PseAddendumWheel.Value , Is.EqualTo(3.6999).Within(0.0001d));
+        Assert.That(Gear.AddendumWheel.Value , Is.EqualTo(3.6999).Within(0.0001d));
     }
 
     [Test]
     public void TestPseDedendumPinion()
     {
-        Assert.That(Gear.PseDedendumPinion.Value , Is.EqualTo(1.9500d).Within(0.0001d));
+        Assert.That(Gear.DedendumPinion.Value , Is.EqualTo(1.9500d).Within(0.0001d));
     }
 
 
     [Test]
     public void TestPseDedendumWheel()
     {
-        Assert.That(Gear.PseDedendumWheel.Value , Is.EqualTo(2.6700d).Within(0.0001d));
+        Assert.That(Gear.DedendumWheel.Value , Is.EqualTo(2.6700d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseWholeDepth()
     {
-        Assert.That(Gear.PseWholeDepth.Value , Is.EqualTo(6.3699d).Within(0.0001d));
+        Assert.That(Gear.WholeDepth.Value , Is.EqualTo(6.3699d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseOutsideDiameterPinion()
     {
-        Assert.That(Gear.PseOutsideDiameterPinion.Value , Is.EqualTo(44.8399d).Within(0.0001d));
+        Assert.That(Gear.OutsideDiameterPinion.Value , Is.EqualTo(44.8399d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseOutsideDiameterWheel()
     {
-        Assert.That(Gear.PseOutsideDiameterWheel.Value , Is.EqualTo(79.3999d).Within(0.0001d));
+        Assert.That(Gear.OutsideDiameterWheel.Value , Is.EqualTo(79.3999d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseRootDiameterPinion()
     {
-        Assert.That(Gear.PseRootDiameterPinion.Value, Is.EqualTo( 32.0999d).Within(0.0001d));
+        Assert.That(Gear.RootDiameterPinion.Value, Is.EqualTo( 32.0999d).Within(0.0001d));
     }
 
 
     [Test]
     public void TestPseRootDiameterWheel()
     {
-        Assert.That(Gear.PseRootDiameterWheel.Value , Is.EqualTo(66.65999d ).Within(0.0001d));
+        Assert.That(Gear.RootDiameterWheel.Value , Is.EqualTo(66.65999d ).Within(0.0001d));
     }
 
     [Test]
     public void TestPseTotalContactRatio()
     {
-        Assert.That(Gear.PseTotalContactRatio.Value, Is.EqualTo( 1.20211d).Within(0.0001d));
+        Assert.That(Gear.TotalContactRatio.Value, Is.EqualTo( 1.20211d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseWorkingPitchDiameterPinion()
     {
-        Assert.That(37.6666d, Is.EqualTo(Gear.PseWorkingPitchDiameterPinion.Value).Within(0.0001d));
+        Assert.That(Gear.WorkingPitchDiameterPinion.Value, Is.EqualTo(37.6666d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseWorkingPitchDiameterWheel()
     {
-        Assert.That(Gear.PseWorkingPitchDiameterWheel.Value, Is.EqualTo( 75.3333d).Within(0.0001d));
+        Assert.That(Gear.WorkingPitchDiameterWheel.Value, Is.EqualTo( 75.3333d).Within(0.0001d));
     }
 
     [Test]

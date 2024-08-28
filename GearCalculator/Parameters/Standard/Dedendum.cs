@@ -18,9 +18,9 @@ public class Dedendum : GearParameter
 
     public void Calc(CalculationParameters parameters)
     {
-        Value = CalcValue(parameters);
+        Value = _calcValue(parameters);
         ImperialValue = CalcImperial(Value);
     }
 
-    public readonly Func<CalculationParameters, double> CalcValue = (parameters) => parameters.Module.Value * 1.25;
+    private readonly Func<CalculationParameters, double> _calcValue = (parameters) => parameters.Module.Value * 1.25;
 }

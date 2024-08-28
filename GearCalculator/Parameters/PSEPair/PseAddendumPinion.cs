@@ -19,11 +19,11 @@ public class PseAddendumPinion : GearParameter
 
     public void Calc(CalculationParameters parameters)
     {
-        Value = CalcValue(parameters);
+        Value = _calcValue(parameters);
         ImperialValue = CalcImperial(Value);
     }
     
-    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
+    private readonly Func<CalculationParameters, double> _calcValue = (parameters) =>
     {
         var z1 = parameters.TeethPinion.Value;
         var z2 = parameters.TeethWheel.Value;

@@ -156,7 +156,7 @@ public class ProfileShiftGearPairPresenter
         invAlphaWIBinding.Format += DoubleTo6DecString;
         _view.invAlphaWI.DataBindings.Add(invAlphaWIBinding);
 
-        var y = _model.Gear.PseCentreDistanceIncrementFactor;
+        var y = _model.Gear.CentreDistanceIncrementFactor;
         _view.yL.Text = y.Description;
         _view.yS.Image = LatexUtils.CreateImageFromLatex(y.LatexSymbol);
         _view.yF.Image = LatexUtils.CreateImageFromLatex(y.LatexFormula);

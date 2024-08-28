@@ -19,12 +19,12 @@ public class BaseDiameterWheel : GearParameter
     
     public void Calc(CalculationParameters parameters)
     {
-        Value = CalcValue(parameters);
+        Value = _calcValue(parameters);
         ImperialValue = CalcImperial(Value);
     }
 
 
-    public readonly Func<CalculationParameters, double> CalcValue = (parameters) =>
+    private readonly Func<CalculationParameters, double> _calcValue = (parameters) =>
     {
         var m = parameters.Module.Value;
         var z2 = parameters.TeethWheel.Value;

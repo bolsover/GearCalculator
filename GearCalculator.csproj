@@ -50,6 +50,8 @@
     <Compile Include="GearCalculator\Gear\ProfileShiftedExtIntSpurGearPair.cs" />
     <Compile Include="GearCalculator\Gear\ProfileShiftExtPair.cs" />
     <Compile Include="GearCalculator\MissingParameterException.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\CoefficientProfileShiftPinion.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\CoefficientProfileShiftWheel.cs" />
     <Compile Include="GearCalculator\Parameters\Inputs\Module.cs" />
     <Compile Include="GearCalculator\Parameters\Inputs\PressureAngle.cs" />
     <Compile Include="GearCalculator\Parameters\Inputs\Teeth.cs" />
@@ -57,7 +59,6 @@
     <Compile Include="GearCalculator\Parameters\Inputs\TeethWheel.cs" />
     <Compile Include="GearCalculator\Parameters\Inputs\WorkingCentreDistance.cs" />
     <Compile Include="GearCalculator\Parameters\GearParameter.cs" />
-    <Compile Include="GearCalculator\Parameters\Inputs\WorkingPitchDiameter.cs" />
     <Compile Include="GearCalculator\Parameters\PSEIPair\PseiAddendumPinion.cs" />
     <Compile Include="GearCalculator\Parameters\PSEIPair\PseiAddendumWheel.cs" />
     <Compile Include="GearCalculator\Parameters\PSEIPair\PseiDedendumPinion.cs" />
@@ -85,8 +86,6 @@
     <Compile Include="GearCalculator\Parameters\PSEPair\WorkingPressureAngle.cs" />
     <Compile Include="GearCalculator\Parameters\StandardPair\BaseDiameterPinion.cs" />
     <Compile Include="GearCalculator\Parameters\StandardPair\BaseDiameterWheel.cs" />
-    <Compile Include="GearCalculator\Parameters\StandardPair\CoefficientProfileShiftPinion.cs" />
-    <Compile Include="GearCalculator\Parameters\StandardPair\CoefficientProfileShiftWheel.cs" />
     <Compile Include="GearCalculator\Parameters\StandardPair\OutsideDiameterPinion.cs" />
     <Compile Include="GearCalculator\Parameters\StandardPair\OutsideDiameterWheel.cs" />
     <Compile Include="GearCalculator\Parameters\StandardPair\PitchDiameterPinion.cs" />
