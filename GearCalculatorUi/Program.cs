@@ -16,5 +16,6 @@ internal static class Program
         Application.SetCompatibleTextRenderingDefault(false);
         Application.Run(new ProfileShiftExtPairForm());
         Application.Run(new StandardGearPairForm());
+        Application.Run(new SimpleGearForm());
     }
 }

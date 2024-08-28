@@ -105,8 +105,8 @@ public class SimpleGearPresenter
         // pressureAngleBinding.Format += DoubleToDegString;
         // _view.pressureAngleImperial.DataBindings.Add(pressureAngleBinding);
         //
-        var pressureAngleImperialBinding = new Binding("Text", pressureAngle, "Value");
-        pressureAngleImperialBinding.Format += DoubleToDegString;
+        var pressureAngleImperialBinding = new Binding("Text", pressureAngle, "AltStringValue");
+       // pressureAngleImperialBinding.Format += DoubleToDegString;
         _view.pressureAngleImperial.DataBindings.Add(pressureAngleImperialBinding);
 
         var pitchDiameter = _model.Gear.PitchDiameter;

@@ -108,8 +108,8 @@ public class StandardGearPairPresenter
         _view.pressureAngleNumericUpDown.Value = (decimal)pressureAngle.Value;
         _view.pressureAngleLabel.Text = pressureAngle.Description;
         _view.pressureAngleSymbol.Image = LatexUtils.CreateImageFromLatex(pressureAngle.LatexSymbol);
-        var pressureAngleImperialBinding = new Binding("Text", pressureAngle, "Value");
-        pressureAngleImperialBinding.Format += DoubleToDegString;
+        var pressureAngleImperialBinding = new Binding("Text", pressureAngle, "AltStringValue");
+       // pressureAngleImperialBinding.Format += DoubleToDegString;
         _view.pressureAngleImperial.DataBindings.Add(pressureAngleImperialBinding);
 
 
