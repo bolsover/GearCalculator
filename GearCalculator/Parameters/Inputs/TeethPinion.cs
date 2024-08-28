@@ -14,8 +14,8 @@ public class TeethPinion : GearParameter
         LatexFormula = "";
     }
 
-    public double Calculate(GearDataParameters dataParameters)
-    {
-        throw new NotImplementedException();
-    }
+    // public double Calculate(GearDataParameters dataParameters)
+    // {
+    //     throw new NotImplementedException();
+    // }
 }

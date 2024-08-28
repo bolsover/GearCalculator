@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 using static Bolsover.GearCalculator.Utils.ConversionUtils;
 
 namespace Bolsover.GearCalculator.Parameters.Standard;
@@ -17,18 +18,12 @@ public class BaseDiameter : GearParameter
     }
 
 
-    public double Calculate(List<GearParameter> parameters)
+    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
     {
-        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
-        var teeth = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Teeth));
-        var pressureAngle =
-            parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.PressureAngle));
-
-
-        var z = teeth.Value;
-        var m = module.Value;
-        var a = pressureAngle.Value;
+        var m = parameters.Module.Value;
+        var z = parameters.Teeth.Value;
+        var a = parameters.PressureAngle.Value;
 
         return z * m * Math.Cos(Radians(a));
-    }
+    };
 }

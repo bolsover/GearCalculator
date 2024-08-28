@@ -15,8 +15,8 @@ public class WorkingCentreDistance : GearParameter
     }
 
 
-    public double Calculate(GearDataParameters dataParameters)
-    {
-        throw new NotImplementedException();
-    }
+    // public double Calculate(GearDataParameters dataParameters)
+    // {
+    //     throw new NotImplementedException();
+    // }
 }

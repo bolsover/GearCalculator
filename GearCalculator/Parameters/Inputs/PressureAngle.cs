@@ -13,8 +13,8 @@ public class PressureAngle : GearParameter
         LatexFormula = LatexFormulae.PressureAngle;
     }
 
-    public double Calculate(GearDataParameters dataParameters)
-    {
-        throw new NotImplementedException();
-    }
+    // public double Calculate(GearDataParameters dataParameters)
+    // {
+    //     throw new NotImplementedException();
+    // }
 }

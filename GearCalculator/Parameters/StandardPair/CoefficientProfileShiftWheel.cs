@@ -8,15 +8,12 @@ public class CoefficientProfileShiftWheel : GearParameter
     public CoefficientProfileShiftWheel()
     {
         ParameterName = GearParameterName.CoefficientProfileShiftWheel;
-        Description = "CoefficientProfileShiftWheel";
+        Description = "Coefficient of Profile Shift";
 
         LatexSymbol = LatexSymbols.CoefficientOfProfileShiftWheel;
         LatexFormula = @"";
     }
 
 
-    public double Calculate(GearDataParameters dataParameters)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

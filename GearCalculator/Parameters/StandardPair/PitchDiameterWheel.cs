@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
@@ -15,16 +17,11 @@ public class PitchDiameterWheel : GearParameter
     }
 
 
-    public double Calculate(List<GearParameter> parameters)
+    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
     {
-        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
+        var m = parameters.Module.Value;
+        var z2 = parameters.TeethWheel.Value;
 
-        var teethWheel = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel));
-
-        var z = teethWheel.Value;
-
-        var m = module.Value;
-
-        return z * m;
-    }
+        return z2 * m;
+    };
 }

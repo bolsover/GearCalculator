@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.Standard;
 
@@ -14,9 +16,5 @@ public class Addendum : GearParameter
         LatexFormula = LatexFormulae.Addendum;
     }
 
-    public double Calculate(List<GearParameter> parameters)
-    {
-        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
-        return module.Value;
-    }
+  public readonly Func<CalculationParameters, double> Calculate = (parameters) => parameters.Module.Value;
 }

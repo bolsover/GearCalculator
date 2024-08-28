@@ -13,10 +13,7 @@ public sealed class ProfileShiftedExtIntSpurGearPair : Gear
     public BaseDiameterWheel BaseDiameterWheel;
     public CoefficientProfileShiftPinion CoefficientProfileShiftPinion;
     public CoefficientProfileShiftWheel CoefficientProfileShiftWheel;
-
     public Module Module;
-
-    public List<GearParameter> Parameters = new();
     public PitchDiameterPinion PitchDiameterPinion;
     public PitchDiameterWheel PitchDiameterWheel;
     public PressureAngle PressureAngle;
@@ -33,9 +30,55 @@ public sealed class ProfileShiftedExtIntSpurGearPair : Gear
     public TeethWheel TeethWheel;
     public WholeDepth WholeDepth;
     public WorkingCentreDistance WorkingCentreDistance;
+    public CalculationParameters CalculationParameters = new CalculationParameters();
+    public List<GearParameter> GearParameters = new();
 
 
     public ProfileShiftedExtIntSpurGearPair()
+    {
+        InitParameters();
+        InitCalculationParameters();
+        InitParameterList();
+    }
+
+    private void InitParameterList()
+    {
+        
+        GearParameters.Add(Module);
+        GearParameters.Add(TeethPinion);
+        GearParameters.Add(TeethWheel);
+        GearParameters.Add(PressureAngle);
+        GearParameters.Add(WorkingCentreDistance);
+        GearParameters.Add(CoefficientProfileShiftPinion);
+        GearParameters.Add(CoefficientProfileShiftWheel);
+        GearParameters.Add(BaseDiameterPinion);
+        GearParameters.Add(BaseDiameterWheel);
+        GearParameters.Add(PseiStandardCentreDistance);
+        GearParameters.Add(PseiCentreDistanceIncrementFactor);
+        GearParameters.Add(PseiInvoluteFunction);
+        GearParameters.Add(PitchDiameterPinion);
+        GearParameters.Add(PitchDiameterWheel);
+        GearParameters.Add(PseiAddendumPinion);
+        GearParameters.Add(PseiAddendumWheel);
+        GearParameters.Add(WholeDepth);
+        GearParameters.Add(PseiDedendumPinion);
+        GearParameters.Add(PseiDedendumWheel);
+        GearParameters.Add(PseiDifferenceCoefficientProfileShift);
+        GearParameters.Add(PseiWorkingPressureAngle);
+    }
+
+    private void InitCalculationParameters()
+    {
+        CalculationParameters.Module  = Module;
+        CalculationParameters.TeethPinion  = TeethPinion;
+        CalculationParameters.TeethWheel  = TeethWheel;    
+        CalculationParameters.PressureAngle = PressureAngle;
+        CalculationParameters.WorkingCentreDistance = WorkingCentreDistance;
+        CalculationParameters.CoefficientProfileShiftPinion = CoefficientProfileShiftPinion;
+        CalculationParameters.CoefficientProfileShiftWheel = CoefficientProfileShiftWheel;
+    }
+
+    private void InitParameters()
     {
         Module = new Module();
         TeethPinion = new TeethPinion();
@@ -58,48 +101,25 @@ public sealed class ProfileShiftedExtIntSpurGearPair : Gear
         PseiDedendumWheel = new PseiDedendumWheel();
         PseiDifferenceCoefficientProfileShift = new PseiDifferenceCoefficientProfileShift();
         PseiWorkingPressureAngle = new PseiWorkingPressureAngle();
-
-
-        Parameters.Add(Module);
-        Parameters.Add(TeethPinion);
-        Parameters.Add(TeethWheel);
-        Parameters.Add(PressureAngle);
-        Parameters.Add(WorkingCentreDistance);
-        Parameters.Add(CoefficientProfileShiftPinion);
-        Parameters.Add(CoefficientProfileShiftWheel);
-        Parameters.Add(BaseDiameterPinion);
-        Parameters.Add(BaseDiameterWheel);
-        Parameters.Add(PseiStandardCentreDistance);
-        Parameters.Add(PseiCentreDistanceIncrementFactor);
-        Parameters.Add(PseiInvoluteFunction);
-        Parameters.Add(PitchDiameterPinion);
-        Parameters.Add(PitchDiameterWheel);
-        Parameters.Add(PseiAddendumPinion);
-        Parameters.Add(PseiAddendumWheel);
-        Parameters.Add(WholeDepth);
-        Parameters.Add(PseiDedendumPinion);
-        Parameters.Add(PseiDedendumWheel);
-        Parameters.Add(PseiDifferenceCoefficientProfileShift);
-        Parameters.Add(PseiWorkingPressureAngle);
     }
 
 
     public override void Calculate()
     {
         Module.ImperialValue = 25.4 / Module.Value;
-        BaseDiameterPinion.Value = BaseDiameterPinion.Calculate(Parameters);
-        BaseDiameterWheel.Value = BaseDiameterWheel.Calculate(Parameters);
-        PseiStandardCentreDistance.Value = PseiStandardCentreDistance.Calculate(Parameters);
-        PseiCentreDistanceIncrementFactor.Value = PseiCentreDistanceIncrementFactor.Calculate(Parameters);
-        PseiInvoluteFunction.Value = PseiInvoluteFunction.Calculate(Parameters);
-        PitchDiameterPinion.Value = PitchDiameterPinion.Calculate(Parameters);
-        PitchDiameterWheel.Value = PitchDiameterWheel.Calculate(Parameters);
-        PseiAddendumPinion.Value = PseiAddendumPinion.Calculate(Parameters);
-        PseiAddendumWheel.Value = PseiAddendumWheel.Calculate(Parameters);
-        WholeDepth.Value = WholeDepth.Calculate(Parameters);
-        PseiDedendumPinion.Value = PseiDedendumPinion.Calculate(Parameters);
-        PseiDedendumWheel.Value = PseiDedendumWheel.Calculate(Parameters);
-        PseiDifferenceCoefficientProfileShift.Value = PseiDifferenceCoefficientProfileShift.Calculate(Parameters);
-        PseiWorkingPressureAngle.Value = PseiWorkingPressureAngle.Calculate(Parameters);
+        BaseDiameterPinion.Value = BaseDiameterPinion.Calculate(CalculationParameters);
+        BaseDiameterWheel.Value = BaseDiameterWheel.Calculate(CalculationParameters);
+        PseiStandardCentreDistance.Value = PseiStandardCentreDistance.Calculate(CalculationParameters);
+        PseiCentreDistanceIncrementFactor.Value = PseiCentreDistanceIncrementFactor.Calculate(CalculationParameters);
+        PseiInvoluteFunction.Value = PseiInvoluteFunction.Calculate(CalculationParameters);
+        PitchDiameterPinion.Value = PitchDiameterPinion.Calculate(CalculationParameters);
+        PitchDiameterWheel.Value = PitchDiameterWheel.Calculate(CalculationParameters);
+        PseiAddendumPinion.Value = PseiAddendumPinion.Calculate(CalculationParameters);
+        PseiAddendumWheel.Value = PseiAddendumWheel.Calculate(CalculationParameters);
+        WholeDepth.Value = WholeDepth.Calculate(CalculationParameters);
+        PseiDedendumPinion.Value = PseiDedendumPinion.Calculate(CalculationParameters);
+        PseiDedendumWheel.Value = PseiDedendumWheel.Calculate(CalculationParameters);
+        PseiDifferenceCoefficientProfileShift.Value = PseiDifferenceCoefficientProfileShift.Calculate(CalculationParameters);
+        PseiWorkingPressureAngle.Value = PseiWorkingPressureAngle.Calculate(CalculationParameters);
     }
 }

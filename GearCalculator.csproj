@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GearCalculator\Dictionary\GearDataParameters.cs" />
     <Compile Include="GearCalculator\Dictionary\GearParameterName.cs" />
     <Compile Include="GearCalculator\Dictionary\LatexFormulae.cs" />
     <Compile Include="GearCalculator\Dictionary\LatexSymbols.cs" />
     <Compile Include="GearCalculator\Gear\Gear.cs" />
+    <Compile Include="GearCalculator\Gear\CalculationParameters.cs" />
     <Compile Include="GearCalculator\Gear\InvoluteSpurGear.cs" />
     <Compile Include="GearCalculator\Gear\InvoluteSpurGearPair.cs" />
     <Compile Include="GearCalculator\Gear\ProfileShiftedExtIntSpurGearPair.cs" />

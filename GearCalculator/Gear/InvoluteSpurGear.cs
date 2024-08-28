@@ -12,13 +12,41 @@ public sealed class InvoluteSpurGear : Gear
     public Dedendum Dedendum;
     public Module Module;
     public OutsideDiameter OutsideDiameter;
-    public List<GearParameter> Parameters = new();
+    public List<GearParameter> GearParameters = new();
     public PitchDiameter PitchDiameter;
     public PressureAngle PressureAngle;
     public RootDiameter RootDiameter;
     public Teeth Teeth;
+    public CalculationParameters CalculationParameters = new CalculationParameters();
 
     public InvoluteSpurGear()
+    {
+        InitParameters();
+        InitCalculationParameters();
+        InitParameterList();
+    }
+
+    private void InitParameterList()
+    {
+        GearParameters.Add(Module);
+        GearParameters.Add(Teeth);
+        GearParameters.Add(PressureAngle);
+        GearParameters.Add(Addendum);
+        GearParameters.Add(Dedendum);
+        GearParameters.Add(PitchDiameter);
+        GearParameters.Add(BaseDiameter);
+        GearParameters.Add(RootDiameter);
+        GearParameters.Add(OutsideDiameter);
+    }
+
+    private void InitCalculationParameters()
+    {
+        CalculationParameters.Module  = Module;
+        CalculationParameters.Teeth  = Teeth;
+        CalculationParameters.PressureAngle = PressureAngle;
+    }
+
+    private void InitParameters()
     {
         Module = new Module();
         Teeth = new Teeth();
@@ -29,38 +57,25 @@ public sealed class InvoluteSpurGear : Gear
         BaseDiameter = new BaseDiameter();
         RootDiameter = new RootDiameter();
         OutsideDiameter = new OutsideDiameter();
-
-
-        Parameters.Add(Module);
-        Parameters.Add(Teeth);
-        Parameters.Add(PressureAngle);
-        Parameters.Add(Addendum);
-        Parameters.Add(Dedendum);
-        Parameters.Add(PitchDiameter);
-        Parameters.Add(BaseDiameter);
-        Parameters.Add(RootDiameter);
-        Parameters.Add(OutsideDiameter);
     }
 
-
-    //   public override GearDataDictionary DataDictionary { get; set; }
 
     public override void Calculate()
     {
         Module.ImperialValue = 25.4 /Module.Value;
         Teeth.ImperialValue = Teeth.Value;
         PressureAngle.ImperialValue = PressureAngle.Value;
-        PitchDiameter.Value = PitchDiameter.Calculate(Parameters);
+        PitchDiameter.Value = PitchDiameter.Calculate(CalculationParameters);
         PitchDiameter.ImperialValue = PitchDiameter.Value/25.4;
-        BaseDiameter.Value = BaseDiameter.Calculate(Parameters);
+        BaseDiameter.Value = BaseDiameter.Calculate(CalculationParameters);
         BaseDiameter.ImperialValue = BaseDiameter.Value/25.4;
-        Addendum.Value = Addendum.Calculate(Parameters);
+        Addendum.Value = Addendum.Calculate(CalculationParameters);
         Addendum.ImperialValue = Addendum.Value/25.4;
-        Dedendum.Value = Dedendum.Calculate(Parameters);
+        Dedendum.Value = Dedendum.Calculate(CalculationParameters);
         Dedendum.ImperialValue =  Dedendum.Value/25.4;
-        OutsideDiameter.Value = OutsideDiameter.Calculate(Parameters);
+        OutsideDiameter.Value = OutsideDiameter.Calculate(CalculationParameters);
         OutsideDiameter.ImperialValue = OutsideDiameter.Value/25.4;
-        RootDiameter.Value = RootDiameter.Calculate(Parameters);
+        RootDiameter.Value = RootDiameter.Calculate(CalculationParameters);
         RootDiameter.ImperialValue = RootDiameter.Value/25.4;
     }
 }

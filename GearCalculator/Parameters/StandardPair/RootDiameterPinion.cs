@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
@@ -15,15 +17,11 @@ public class RootDiameterPinion : GearParameter
     }
 
 
-    public double Calculate(List<GearParameter> parameters)
+    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
     {
-        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
-        var teethPinion = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion));
-
-        var z1 = teethPinion.Value;
-        var m = module.Value;
-
+        var m = parameters.Module.Value;
+        var z1 = parameters.TeethPinion.Value;
 
         return z1 * m - 2.5 * m;
-    }
+    };
 }

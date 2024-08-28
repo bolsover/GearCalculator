@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleIO.cs" />
+    <Compile Include="DelegateTests\CentreDistance.cs" />
+    <Compile Include="DelegateTests\CentreDistanceTest.cs" />
     <Compile Include="GearTests\involuteSpurGearPairTests.cs" />
     <Compile Include="GearTests\InvoluteSpurGearTests.cs" />
     <Compile Include="GearTests\ProfileShiftedExtIntSpurGearPairTests.cs" />

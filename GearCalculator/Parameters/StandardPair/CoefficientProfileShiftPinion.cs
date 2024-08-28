@@ -15,8 +15,5 @@ public class CoefficientProfileShiftPinion : GearParameter
     }
 
 
-    public double Calculate(GearDataParameters dataParameters)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

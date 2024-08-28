@@ -13,10 +13,5 @@ public class Module : GearParameter
         LatexFormula = "";
     }
 
-    public double Calculate(GearDataParameters dataParameters)
-    {
-        throw new NotImplementedException();
-    }
 
-    
 }

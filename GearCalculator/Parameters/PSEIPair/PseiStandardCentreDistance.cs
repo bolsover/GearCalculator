@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.PSEIPair;
 
@@ -8,19 +10,18 @@ public class PseiStandardCentreDistance : GearParameter
     public PseiStandardCentreDistance()
     {
         ParameterName = GearParameterName.PseiStandardCentreDistance;
-        Description = "PseiStandardCentreDistance";
+        Description = "Standard Centre Distance";
 
         LatexSymbol = LatexSymbols.StandardCentreDistance;
         LatexFormula = @"\frac{\left( z_{1} + z_{2} \right) m}{2}";
     }
 
-    public double Calculate(List<GearParameter> parameters)
+    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
     {
-        var z1 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion)).Value;
-        var z2 = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel)).Value;
-        var m = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module)).Value;
-
+        var z1 = parameters.TeethPinion.Value;
+        var z2 = parameters.TeethWheel.Value;
+        var m = parameters.Module.Value;
 
         return (z2 - z1) * m / 2;
-    }
+    };
 }

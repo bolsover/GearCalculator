@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.StandardPair;
 
@@ -11,20 +13,16 @@ public class StandardCentreDistance : GearParameter
         Description = "Centre Distance";
 
         LatexSymbol = LatexSymbols.StandardCentreDistance;
-        LatexFormula = LatexFormulae.StandardCentreDistance; //@"\frac{\left( z_{1} + z_{2} \right) m}{2}";
+        LatexFormula = LatexFormulae.StandardCentreDistance; 
     }
 
 
-    public double Calculate(List<GearParameter> parameters)
+    public readonly Func<CalculationParameters, double> Calculate = (parameters) =>
     {
-        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
-        var teethPinion = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethPinion));
-        var teethWheel = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.TeethWheel));
-
-        var z1 = teethPinion.Value;
-        var z2 = teethWheel.Value;
-        var m = module.Value;
+        var m = parameters.Module.Value;
+        var z1 = parameters.TeethPinion.Value;
+        var z2 = parameters.TeethWheel.Value;
 
         return (z1 + z2) * m / 2;
-    }
+    };
 }

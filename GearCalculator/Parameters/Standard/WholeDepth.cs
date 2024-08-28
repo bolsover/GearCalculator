@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Bolsover.GearCalculator.Dictionary;
+using Bolsover.GearCalculator.Gear;
 
 namespace Bolsover.GearCalculator.Parameters.Standard;
 
@@ -9,17 +11,10 @@ public class WholeDepth : GearParameter
     {
         ParameterName = GearParameterName.WholeDepth;
         Description = "WholeDepth";
-
         LatexSymbol = LatexSymbols.WholeDepth; //@"h";
         LatexFormula = @"2.25m";
     }
 
 
-    public double Calculate(List<GearParameter> parameters)
-    {
-        var module = parameters.Find(parameter => parameter.ParameterName.Equals(GearParameterName.Module));
-
-
-        return 2.25 * module.Value;
-    }
+    public readonly Func<CalculationParameters, double> Calculate = (parameters) => parameters.Module.Value * 2.25;
 }
