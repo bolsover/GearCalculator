@@ -13,7 +13,7 @@ public class RootDiameter : GearParameter
         Description = "Root Diameter";
 
         LatexSymbol = LatexSymbols.RootDiameter; //@"d_{f}";
-        LatexFormula = @"d-2.5m";
+        LatexFormula = LatexFormulae.RootDiameter; //@"d-2.5m";
     }
 
     public void Calc(CalculationParameters parameters)

@@ -13,7 +13,7 @@ public class PseWorkingPitchDiameterPinion : GearParameter
         ParameterName = GearParameterName.PseWorkingPitchDiameterPinion;
         Description = "Working Pitch Diameter";
         LatexSymbol = LatexSymbols.WorkingPitchDiameterPinion; //"d_{w1}";
-        LatexFormula = @"\frac{d_{b1}}{cos\alpha_{w}}";
+        LatexFormula = LatexFormulae.PseWorkingPitchDiameterPinion; // @"\frac{d_{b1}}{cos\alpha_{w}}";
     }
 
 

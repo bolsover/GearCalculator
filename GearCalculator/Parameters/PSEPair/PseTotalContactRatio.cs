@@ -12,11 +12,11 @@ public class PseTotalContactRatio : GearParameter
     {
         ParameterName = GearParameterName.PseTotalContactRatio;
         Description = "Total Contact Ratio";
-        LatexSymbol = LatexSymbols.TotalContactRatio; 
-        LatexFormula =
-            @"\frac{\sqrt{\left(\frac{d_{a1}}{2}\right)^{2} - \left(\frac{d_{b1}}{2}\right)^{2}} +
-            \sqrt{\left(\frac{d_{a2}}{2}\right)^{2} - \left(\frac{d_{b2}}{2}\right)^{2}} -
-            a_{x} \cdot sin \alpha_{w}}{\pi \cdot m \cdot cos\alpha}";
+        LatexSymbol = LatexSymbols.TotalContactRatio;
+        LatexFormula = LatexFormulae.PseTotalContactRatio; 
+            // @"\frac{\sqrt{\left(\frac{d_{a1}}{2}\right)^{2} - \left(\frac{d_{b1}}{2}\right)^{2}} +
+            // \sqrt{\left(\frac{d_{a2}}{2}\right)^{2} - \left(\frac{d_{b2}}{2}\right)^{2}} -
+            // a_{x} \cdot sin \alpha_{w}}{\pi \cdot m \cdot cos\alpha}";
     }
 
 

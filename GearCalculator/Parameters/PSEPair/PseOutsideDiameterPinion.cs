@@ -12,7 +12,7 @@ public class PseOutsideDiameterPinion : GearParameter
         ParameterName = GearParameterName.PseOutsideDiameterPinion;
         Description = "Outside Diameter";
         LatexSymbol = LatexSymbols.OutsideDiameterPinion;
-        LatexFormula = @"d_{1}-2h_{a1}";
+        LatexFormula = LatexFormulae.PseOutsideDiameterPinion; // @"d_{1}-2h_{a1}";
     }
 
 

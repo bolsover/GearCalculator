@@ -13,7 +13,7 @@ public class PseiStandardCentreDistance : GearParameter
         Description = "Standard Centre Distance";
 
         LatexSymbol = LatexSymbols.StandardCentreDistance;
-        LatexFormula = @"\frac{\left( z_{1} + z_{2} \right) m}{2}";
+        LatexFormula = LatexFormulae.PseiStandardCentreDistance; //@"\frac{\left( z_{1} + z_{2} \right) m}{2}";
     }
 
     public void Calc(CalculationParameters parameters)

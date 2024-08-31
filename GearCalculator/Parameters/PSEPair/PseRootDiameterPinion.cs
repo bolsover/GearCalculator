@@ -12,7 +12,7 @@ public class PseRootDiameterPinion : GearParameter
         ParameterName = GearParameterName.PseRootDiameterPinion;
         Description = "Root Diameter";
         LatexSymbol = LatexSymbols.RootDiameterPinion;
-        LatexFormula = @"d_{a1}-2h";
+        LatexFormula = LatexFormulae.PseRootDiameterPinion; //@"d_{a1}-2h";
     }
 
 

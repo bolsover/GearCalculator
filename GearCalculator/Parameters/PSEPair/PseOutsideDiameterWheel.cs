@@ -13,7 +13,7 @@ public class PseOutsideDiameterWheel : GearParameter
         Description = "PseOutsideDiameterWheel";
 
         LatexSymbol = LatexSymbols.DedendumWheel;
-        LatexFormula = @"d_{2}-2h_{a2}";
+        LatexFormula = LatexFormulae.PseOutsideDiameterWheel; // @"d_{2}-2h_{a2}";
     }
 
 

@@ -12,7 +12,7 @@ public class PseRootDiameterWheel : GearParameter
         ParameterName = GearParameterName.PseRootDiameterWheel;
         Description = "Root Diameter";
         LatexSymbol = LatexSymbols.RootDiameterWheel;
-        LatexFormula = @"d_{a2}-2h";
+        LatexFormula = LatexFormulae.PseRootDiameterWheel; //@"d_{a2}-2h";
     }
 
 

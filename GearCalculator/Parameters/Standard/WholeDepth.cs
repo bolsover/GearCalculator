@@ -12,7 +12,7 @@ public class WholeDepth : GearParameter
         ParameterName = GearParameterName.WholeDepth;
         Description = "WholeDepth";
         LatexSymbol = LatexSymbols.WholeDepth; //@"h";
-        LatexFormula = @"2.25m";
+        LatexFormula = LatexFormulae.WholeDepth; // @"2.25m";
     }
 
     public void Calc(CalculationParameters parameters)

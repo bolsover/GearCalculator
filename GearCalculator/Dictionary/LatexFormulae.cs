@@ -43,4 +43,18 @@ public static class LatexFormulae
     public static readonly string StandardCentreDistance = @"\frac{\left( z_{1} + z_{2} \right) m}{2}";
     public static readonly string WorkingPressureAngle  = @" cos^{-1}\left[\frac{\left(z_{1}+z_{2}\right)cos\:\alpha}{2y+z_{1}+z_{2}}\right]";
     public static readonly string WorkingInvoluteFunction = @"tan\alpha_{w} - \alpha_{w}";
+    public static readonly string RootDiameter = @"d-2.5m";
+    public static readonly string WholeDepth = @"2.25m";
+    public static readonly string PseOutsideDiameterPinion = @"d_{1}-2h_{a1}";
+    public static readonly string PseOutsideDiameterWheel = @"d_{2}-2h_{a2}";
+    public static readonly string PseRootDiameterPinion = @"d_{a1}-2h";
+    public static readonly string PseRootDiameterWheel = @"d_{a2}-2h";
+    public static readonly string PseTotalContactRatio = @"\frac{\sqrt{\left(\frac{d_{a1}}{2}\right)^{2} - \left(\frac{d_{b1}}{2}\right)^{2}} +
+            \sqrt{\left(\frac{d_{a2}}{2}\right)^{2} - \left(\frac{d_{b2}}{2}\right)^{2}} -
+            a_{x} \cdot sin \alpha_{w}}{\pi \cdot m \cdot cos\alpha}";
+
+    public static readonly string PseWholeDepth = @"\left[2.25 + y -\left(x_{1} + x_{2}\right)\right]m";
+    public static readonly string PseWorkingPitchDiameterPinion = @"\frac{d_{b1}}{cos\alpha_{w}}";
+    public static readonly string PseWorkingPitchDiameterWheel = @"\frac{d_{b2}}{cos\alpha_{w}}";
+    public static readonly string PseiStandardCentreDistance = @"\frac{\left( z_{1} + z_{2} \right) m}{2}";
 }

@@ -13,7 +13,7 @@ public class PseWorkingPitchDiameterWheel : GearParameter
         ParameterName = GearParameterName.PseWorkingPitchDiameterWheel;
         Description = "Working Pitch Diameter";
         LatexSymbol = LatexSymbols.WorkingPitchDiameterWheel; //"d_{w2}";
-        LatexFormula = @"\frac{d_{b2}}{cos\alpha_{w}}";
+        LatexFormula = LatexFormulae.PseWorkingPitchDiameterWheel; //@"\frac{d_{b2}}{cos\alpha_{w}}";
     }
 
 

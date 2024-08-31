@@ -12,7 +12,7 @@ public class PseWholeDepth : GearParameter
         ParameterName = GearParameterName.PseWholeDepth;
         Description = "Whole Depth";
         LatexSymbol = LatexSymbols.WholeDepth;
-        LatexFormula = @"\left[2.25 + y -\left(x_{1} + x_{2}\right)\right]m";
+        LatexFormula = LatexFormulae.PseWholeDepth; //@"\left[2.25 + y -\left(x_{1} + x_{2}\right)\right]m";
     }
 
 
