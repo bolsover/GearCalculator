@@ -4,7 +4,7 @@ namespace Bolsover.GearCalculatorUi.Model;
 
 public class StandardGearPairModel
 {
-    public InvoluteSpurGearPair Gear = new();
+    public readonly InvoluteSpurGearPair Gear = new();
 
     public StandardGearPairModel()
     {

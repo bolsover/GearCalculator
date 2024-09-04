@@ -68,6 +68,9 @@ public class ProfileShiftExtPairTests
     public void TestPseAddendumPinion()
     {
         Assert.That(Gear.AddendumPinion.Value, Is.EqualTo( 4.41999).Within(0.0001d));
+        // Gear.Module.Value = 4d;
+        // Gear.Calculate();
+        // Assert.That(Gear.AddendumPinion.Value, Is.EqualTo( 4.41999).Within(0.0001d));
     }
 
 

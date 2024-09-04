@@ -30,7 +30,7 @@ public class PseAddendumPinion : GearParameter
         var m = parameters.Module.Value;
         var ax = parameters.WorkingCentreDistance.Value;
         var x2 = parameters.CoefficientProfileShiftWheel.Value;
-        var y = ax / m - (z1 + z2) / 2; //centre distance increment factor
+        var y = (ax / m) - ((z1 + z2) / 2); //centre distance increment factor
 
         return (1 + y - x2) * m;
     };

@@ -43,7 +43,7 @@ public static class LatexUtils
             return null;
         }
 
-        var pngBytes = formula.RenderToPng(20.0, 0.0, 0.0, "Cambria");
+        var pngBytes = formula.RenderToPng(15.0, 0.0, 0.0, "Cambria");
         return ByteArrayToImage(pngBytes);
     }
 }

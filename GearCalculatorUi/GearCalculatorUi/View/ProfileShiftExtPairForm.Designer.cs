@@ -31,31 +31,33 @@ partial class ProfileShiftExtPairForm
     /// </summary>
     private void InitializeComponent()
     {
-            this.profileShiftExtPairView1 = new Bolsover.GearCalculatorUi.View.ProfileShiftExtPairView();
-            this.SuspendLayout();
-            // 
-            // profileShiftExtPairView1
-            // 
-            this.profileShiftExtPairView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileShiftExtPairView1.Location = new System.Drawing.Point(0, 0);
-            this.profileShiftExtPairView1.Name = "profileShiftExtPairView1";
-            this.profileShiftExtPairView1.Padding = new System.Windows.Forms.Padding(5);
-            this.profileShiftExtPairView1.Size = new System.Drawing.Size(1638, 1097);
-            this.profileShiftExtPairView1.TabIndex = 0;
-            // 
-            // ProfileShiftExtPairForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1638, 1097);
-            this.Controls.Add(this.profileShiftExtPairView1);
-            this.Name = "ProfileShiftExtPairForm";
-            this.Text = "ProfileShiftExtPairForm";
-            this.ResumeLayout(false);
-
+        this.profileShiftExtPairView1 = new Bolsover.GearCalculatorUi.View.ProfileShiftExtPairView();
+        this.SuspendLayout();
+        // 
+        // profileShiftExtPairView1
+        // 
+        this.profileShiftExtPairView1.Dock = System.Windows.Forms.DockStyle.Fill;
+        this.profileShiftExtPairView1.Location = new System.Drawing.Point(0, 0);
+        this.profileShiftExtPairView1.Margin = new System.Windows.Forms.Padding(2);
+        this.profileShiftExtPairView1.Name = "profileShiftExtPairView1";
+        this.profileShiftExtPairView1.Padding = new System.Windows.Forms.Padding(4);
+        this.profileShiftExtPairView1.Size = new System.Drawing.Size(1146, 804);
+        this.profileShiftExtPairView1.TabIndex = 0;
+        // 
+        // ProfileShiftExtPairForm
+        // 
+        this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.AutoSize = true;
+        this.ClientSize = new System.Drawing.Size(1146, 804);
+        this.Controls.Add(this.profileShiftExtPairView1);
+        this.Margin = new System.Windows.Forms.Padding(2);
+        this.Name = "ProfileShiftExtPairForm";
+        this.Text = "ProfileShiftExtPairForm";
+        this.ResumeLayout(false);
     }
 
     #endregion
 
-    private ProfileShiftExtPairView profileShiftExtPairView1;
+    private Bolsover.GearCalculatorUi.View.ProfileShiftExtPairView profileShiftExtPairView1;
 }

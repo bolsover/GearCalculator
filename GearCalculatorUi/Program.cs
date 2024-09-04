@@ -14,8 +14,10 @@ internal static class Program
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-        Application.Run(new ProfileShiftExtPairForm());
+        
+       
+        Application.Run(new SimpleGearForm()); 
         Application.Run(new StandardGearPairForm());
-        Application.Run(new SimpleGearForm());
+        Application.Run(new ProfileShiftExtPairForm());
     }
 }

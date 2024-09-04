@@ -29,19 +29,19 @@ public class ProfileShiftedExtIntSpurGearPairTests
     [Test]
     public void TestPseiWorkingPressureAngle()
     {
-        Assert.That(Gear.PseiWorkingPressureAngle.Value, Is.EqualTo(31.09385d).Within(0.0001d));
+        Assert.That(Gear.WorkingPressureAngle.Value, Is.EqualTo(31.09385d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseiInvoluteFunction()
     {
-        Assert.That(Gear.PseiInvoluteFunction.Value, Is.EqualTo(0.06040d).Within(0.0001d));
+        Assert.That(Gear.InvoluteFunction.Value, Is.EqualTo(0.06040d).Within(0.0001d));
     }
 
     [Test]
     public void TestDifferenceCoefficientProfileShift()
     {
-        Assert.That(Gear.PseiDifferenceCoefficientProfileShift.Value, Is.EqualTo(0.5000d).Within(0.0001d));
+        Assert.That(Gear.DifferenceCoefficientProfileShift.Value, Is.EqualTo(0.5000d).Within(0.0001d));
     }
 
     [Test]
@@ -59,19 +59,19 @@ public class ProfileShiftedExtIntSpurGearPairTests
     [Test]
     public void TestPseiStandardCentreDistance()
     {
-        Assert.That(Gear.PseiStandardCentreDistance.Value, Is.EqualTo(12.000d).Within(0.0001d));
+        Assert.That(Gear.StandardCentreDistance.Value, Is.EqualTo(12.000d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseiCentreDistanceIncrementFactor()
     {
-        Assert.That(Gear.PseiCentreDistanceIncrementFactor.Value, Is.EqualTo(0.3894d).Within(0.0001d));
+        Assert.That(Gear.CentreDistanceIncrementFactor.Value, Is.EqualTo(0.3894d).Within(0.0001d));
     }
 
     [Test]
     public void TestInvoluteFunction()
     {
-        Assert.That(Gear.PseiInvoluteFunction.Value, Is.EqualTo(0.06040d).Within(0.0001d));
+        Assert.That(Gear.InvoluteFunction.Value, Is.EqualTo(0.06040d).Within(0.0001d));
     }
 
     [Test]
@@ -90,25 +90,25 @@ public class ProfileShiftedExtIntSpurGearPairTests
     [Test]
     public void TestPseiAddendumPinion()
     {
-        Assert.That(Gear.PseiAddendumPinion.Value, Is.EqualTo(3.000d).Within(0.0001d));
+        Assert.That(Gear.AddendumPinion.Value, Is.EqualTo(3.000d).Within(0.0001d));
     }
 
 
     [Test]
     public void TestPseAddendumWheel()
     {
-        Assert.That(Gear.PseiAddendumWheel.Value, Is.EqualTo(1.500d).Within(0.0001d));
+        Assert.That(Gear.AddendumWheel.Value, Is.EqualTo(1.500d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseiDedendumPinion()
     {
-        Assert.That(Gear.PseiDedendumPinion.Value, Is.EqualTo(3.75d).Within(0.0001d));
+        Assert.That(Gear.DedendumPinion.Value, Is.EqualTo(3.75d).Within(0.0001d));
     }
 
     [Test]
     public void TestPseiDedendumWheel()
     {
-        Assert.That(Gear.PseiDedendumWheel.Value, Is.EqualTo(5.25d).Within(0.0001d));
+        Assert.That(Gear.DedendumWheel.Value, Is.EqualTo(5.25d).Within(0.0001d));
     }
 }

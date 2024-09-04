@@ -39,17 +39,20 @@ partial class StandardGearPairForm
         this.view.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.view.Dock = System.Windows.Forms.DockStyle.Fill;
         this.view.Location = new System.Drawing.Point(0, 0);
+        this.view.Margin = new System.Windows.Forms.Padding(2);
         this.view.Name = "view";
-        this.view.Padding = new System.Windows.Forms.Padding(10);
-        this.view.Size = new System.Drawing.Size(1382, 675);
+        this.view.Padding = new System.Windows.Forms.Padding(8);
+        this.view.Size = new System.Drawing.Size(929, 406);
         this.view.TabIndex = 0;
         // 
         // StandardGearPairForm
         // 
-        this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+        this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(1382, 675);
+        this.AutoSize = true;
+        this.ClientSize = new System.Drawing.Size(929, 406);
         this.Controls.Add(this.view);
+        this.Margin = new System.Windows.Forms.Padding(2);
         this.Name = "StandardGearPairForm";
         this.Text = "Standard Gear Pair";
         this.ResumeLayout(false);

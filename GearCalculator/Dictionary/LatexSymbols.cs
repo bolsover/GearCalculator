@@ -40,7 +40,7 @@ public static class LatexSymbols
     public static readonly string InvoluteFunction = @"inv\:\alpha";
     public static readonly string PseiInvoluteFunction = @"inv\:\alpha_{w}";
    
-    public static readonly string TotalContactRatio = @"d\epsilon_{\gamma}";
+    public static readonly string TotalContactRatio = @"\epsilon_{\gamma}";
     public static readonly string WholeDepth = @"h";
     public static readonly string WorkingInvoluteFunction =  @"inv\:\alpha_{w}";
     public static readonly string WorkingPressureAngle  = @"\alpha_{w}";

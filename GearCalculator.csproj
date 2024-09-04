@@ -50,6 +50,7 @@
     <Compile Include="GearCalculator\Gear\ProfileShiftedExtIntSpurGearPair.cs" />
     <Compile Include="GearCalculator\Gear\ProfileShiftExtPair.cs" />
     <Compile Include="GearCalculator\MissingParameterException.cs" />
+    <Compile Include="GearCalculator\Parameters\Inputs\AutoCalcMode.cs" />
     <Compile Include="GearCalculator\Parameters\Inputs\CoefficientProfileShiftPinion.cs" />
     <Compile Include="GearCalculator\Parameters\Inputs\CoefficientProfileShiftWheel.cs" />
     <Compile Include="GearCalculator\Parameters\Inputs\Module.cs" />

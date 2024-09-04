@@ -11,6 +11,7 @@ public sealed class InvoluteSpurGear : Gear
     public readonly Module Module = new ();
     public readonly Teeth Teeth = new ();
     public readonly PressureAngle PressureAngle = new ();
+    public readonly AutoCalcMode AutoCalcMode = new ();
     
     // calculated parameters
     public readonly Addendum Addendum = new ();
@@ -19,6 +20,7 @@ public sealed class InvoluteSpurGear : Gear
     public readonly OutsideDiameter OutsideDiameter = new ();
     public readonly PitchDiameter PitchDiameter = new ();
     public readonly RootDiameter RootDiameter = new ();
+   
    
 
     public InvoluteSpurGear()

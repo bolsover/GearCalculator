@@ -4,7 +4,7 @@ namespace Bolsover.GearCalculatorUi.Model;
 
 public class ProfileShiftExtPairModel
 {
-    public ProfileShiftExtPair Gear = new();
+    public readonly ProfileShiftExtPair Gear = new();
 
     public ProfileShiftExtPairModel()
     {

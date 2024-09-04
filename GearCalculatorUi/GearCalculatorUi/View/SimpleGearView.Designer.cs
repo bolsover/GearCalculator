@@ -143,30 +143,30 @@ namespace Bolsover.GearCalculatorUi.View
             this.tablePanel.Controls.Add(this.rootDiameterImperial, 4, 9);
             this.tablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel.Location = new System.Drawing.Point(0, 0);
-            this.tablePanel.Margin = new System.Windows.Forms.Padding(5);
+            this.tablePanel.Margin = new System.Windows.Forms.Padding(4);
             this.tablePanel.Name = "tablePanel";
-            this.tablePanel.RowCount = 11;
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tablePanel.Size = new System.Drawing.Size(1007, 536);
+            this.tablePanel.RowCount = 10;
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tablePanel.Size = new System.Drawing.Size(622, 331);
             this.tablePanel.TabIndex = 0;
             // 
             // moduleLabel
             // 
             this.moduleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.moduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moduleLabel.Location = new System.Drawing.Point(4, 52);
+            this.moduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moduleLabel.Location = new System.Drawing.Point(3, 34);
+            this.moduleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moduleLabel.Name = "moduleLabel";
-            this.moduleLabel.Size = new System.Drawing.Size(194, 50);
+            this.moduleLabel.Size = new System.Drawing.Size(119, 32);
             this.moduleLabel.TabIndex = 0;
             this.moduleLabel.Text = "m";
             this.moduleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,12 +175,13 @@ namespace Bolsover.GearCalculatorUi.View
             // 
             this.moduleNumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.moduleNumericUpDown.DecimalPlaces = 3;
-            this.moduleNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moduleNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moduleNumericUpDown.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            this.moduleNumericUpDown.Location = new System.Drawing.Point(607, 63);
+            this.moduleNumericUpDown.Location = new System.Drawing.Point(375, 40);
+            this.moduleNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.moduleNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
             this.moduleNumericUpDown.Name = "moduleNumericUpDown";
-            this.moduleNumericUpDown.Size = new System.Drawing.Size(194, 27);
+            this.moduleNumericUpDown.Size = new System.Drawing.Size(119, 20);
             this.moduleNumericUpDown.TabIndex = 2;
             this.moduleNumericUpDown.Value = new decimal(new int[] { 25, 0, 0, 65536 });
             this.moduleNumericUpDown.ValueChanged += new System.EventHandler(this.moduleNumericUpDown_ValueChanged);
@@ -188,18 +189,20 @@ namespace Bolsover.GearCalculatorUi.View
             // moduleSymbol
             // 
             this.moduleSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.moduleSymbol.Location = new System.Drawing.Point(205, 52);
+            this.moduleSymbol.Location = new System.Drawing.Point(127, 34);
+            this.moduleSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moduleSymbol.Name = "moduleSymbol";
-            this.moduleSymbol.Size = new System.Drawing.Size(194, 50);
+            this.moduleSymbol.Size = new System.Drawing.Size(119, 32);
             this.moduleSymbol.TabIndex = 3;
             // 
             // pitchDiameterLabel
             // 
             this.pitchDiameterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitchDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pitchDiameterLabel.Location = new System.Drawing.Point(4, 205);
+            this.pitchDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pitchDiameterLabel.Location = new System.Drawing.Point(3, 133);
+            this.pitchDiameterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pitchDiameterLabel.Name = "pitchDiameterLabel";
-            this.pitchDiameterLabel.Size = new System.Drawing.Size(194, 50);
+            this.pitchDiameterLabel.Size = new System.Drawing.Size(119, 32);
             this.pitchDiameterLabel.TabIndex = 5;
             this.pitchDiameterLabel.Text = "d";
             this.pitchDiameterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,45 +210,50 @@ namespace Bolsover.GearCalculatorUi.View
             // pitchDiameterTextBox
             // 
             this.pitchDiameterTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pitchDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pitchDiameterTextBox.Location = new System.Drawing.Point(607, 216);
+            this.pitchDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pitchDiameterTextBox.Location = new System.Drawing.Point(375, 139);
+            this.pitchDiameterTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.pitchDiameterTextBox.Name = "pitchDiameterTextBox";
-            this.pitchDiameterTextBox.Size = new System.Drawing.Size(194, 27);
+            this.pitchDiameterTextBox.Size = new System.Drawing.Size(119, 20);
             this.pitchDiameterTextBox.TabIndex = 6;
             // 
             // pitchDiameterFormula
             // 
             this.pitchDiameterFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitchDiameterFormula.Location = new System.Drawing.Point(406, 205);
+            this.pitchDiameterFormula.Location = new System.Drawing.Point(251, 133);
+            this.pitchDiameterFormula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pitchDiameterFormula.Name = "pitchDiameterFormula";
-            this.pitchDiameterFormula.Size = new System.Drawing.Size(194, 50);
+            this.pitchDiameterFormula.Size = new System.Drawing.Size(119, 32);
             this.pitchDiameterFormula.TabIndex = 7;
             // 
             // pitchDiameterSymbol
             // 
             this.pitchDiameterSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitchDiameterSymbol.Location = new System.Drawing.Point(205, 205);
+            this.pitchDiameterSymbol.Location = new System.Drawing.Point(127, 133);
+            this.pitchDiameterSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pitchDiameterSymbol.Name = "pitchDiameterSymbol";
-            this.pitchDiameterSymbol.Size = new System.Drawing.Size(194, 50);
+            this.pitchDiameterSymbol.Size = new System.Drawing.Size(119, 32);
             this.pitchDiameterSymbol.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 1);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 1);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 50);
+            this.label1.Size = new System.Drawing.Size(119, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Item";
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(205, 1);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(127, 1);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 50);
+            this.label2.Size = new System.Drawing.Size(119, 32);
             this.label2.TabIndex = 10;
             this.label2.Text = "Symbol";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -253,10 +261,11 @@ namespace Bolsover.GearCalculatorUi.View
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(406, 1);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(251, 1);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 50);
+            this.label3.Size = new System.Drawing.Size(119, 32);
             this.label3.TabIndex = 11;
             this.label3.Text = "Formula";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -264,10 +273,11 @@ namespace Bolsover.GearCalculatorUi.View
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(607, 1);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(375, 1);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 50);
+            this.label4.Size = new System.Drawing.Size(119, 32);
             this.label4.TabIndex = 12;
             this.label4.Text = "Metric";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -275,10 +285,11 @@ namespace Bolsover.GearCalculatorUi.View
             // teethLabel
             // 
             this.teethLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teethLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teethLabel.Location = new System.Drawing.Point(4, 103);
+            this.teethLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teethLabel.Location = new System.Drawing.Point(3, 67);
+            this.teethLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.teethLabel.Name = "teethLabel";
-            this.teethLabel.Size = new System.Drawing.Size(194, 50);
+            this.teethLabel.Size = new System.Drawing.Size(119, 32);
             this.teethLabel.TabIndex = 14;
             this.teethLabel.Text = "z";
             this.teethLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,20 +297,22 @@ namespace Bolsover.GearCalculatorUi.View
             // teethSymbol
             // 
             this.teethSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teethSymbol.Location = new System.Drawing.Point(205, 103);
+            this.teethSymbol.Location = new System.Drawing.Point(127, 67);
+            this.teethSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.teethSymbol.Name = "teethSymbol";
-            this.teethSymbol.Size = new System.Drawing.Size(194, 50);
+            this.teethSymbol.Size = new System.Drawing.Size(119, 32);
             this.teethSymbol.TabIndex = 15;
             // 
             // teethNumericUpDown
             // 
             this.teethNumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.teethNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teethNumericUpDown.Location = new System.Drawing.Point(607, 114);
+            this.teethNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teethNumericUpDown.Location = new System.Drawing.Point(375, 73);
+            this.teethNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.teethNumericUpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             this.teethNumericUpDown.Minimum = new decimal(new int[] { 5, 0, 0, 0 });
             this.teethNumericUpDown.Name = "teethNumericUpDown";
-            this.teethNumericUpDown.Size = new System.Drawing.Size(194, 27);
+            this.teethNumericUpDown.Size = new System.Drawing.Size(119, 20);
             this.teethNumericUpDown.TabIndex = 17;
             this.teethNumericUpDown.Value = new decimal(new int[] { 5, 0, 0, 0 });
             this.teethNumericUpDown.ValueChanged += new System.EventHandler(this.teethNumericUpDown_ValueChanged);
@@ -307,10 +320,11 @@ namespace Bolsover.GearCalculatorUi.View
             // pressureAngleLabel
             // 
             this.pressureAngleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pressureAngleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pressureAngleLabel.Location = new System.Drawing.Point(4, 154);
+            this.pressureAngleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pressureAngleLabel.Location = new System.Drawing.Point(3, 100);
+            this.pressureAngleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pressureAngleLabel.Name = "pressureAngleLabel";
-            this.pressureAngleLabel.Size = new System.Drawing.Size(194, 50);
+            this.pressureAngleLabel.Size = new System.Drawing.Size(119, 32);
             this.pressureAngleLabel.TabIndex = 18;
             this.pressureAngleLabel.Text = "alpha";
             this.pressureAngleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -318,22 +332,24 @@ namespace Bolsover.GearCalculatorUi.View
             // pressureAngleSymbol
             // 
             this.pressureAngleSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pressureAngleSymbol.Location = new System.Drawing.Point(205, 154);
+            this.pressureAngleSymbol.Location = new System.Drawing.Point(127, 100);
+            this.pressureAngleSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pressureAngleSymbol.Name = "pressureAngleSymbol";
-            this.pressureAngleSymbol.Size = new System.Drawing.Size(194, 50);
+            this.pressureAngleSymbol.Size = new System.Drawing.Size(119, 32);
             this.pressureAngleSymbol.TabIndex = 19;
             // 
             // pressureAngleNumericUpDown
             // 
             this.pressureAngleNumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pressureAngleNumericUpDown.DecimalPlaces = 3;
-            this.pressureAngleNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pressureAngleNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pressureAngleNumericUpDown.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            this.pressureAngleNumericUpDown.Location = new System.Drawing.Point(607, 165);
+            this.pressureAngleNumericUpDown.Location = new System.Drawing.Point(375, 106);
+            this.pressureAngleNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.pressureAngleNumericUpDown.Maximum = new decimal(new int[] { 35, 0, 0, 0 });
             this.pressureAngleNumericUpDown.Minimum = new decimal(new int[] { 5, 0, 0, 0 });
             this.pressureAngleNumericUpDown.Name = "pressureAngleNumericUpDown";
-            this.pressureAngleNumericUpDown.Size = new System.Drawing.Size(194, 27);
+            this.pressureAngleNumericUpDown.Size = new System.Drawing.Size(119, 20);
             this.pressureAngleNumericUpDown.TabIndex = 21;
             this.pressureAngleNumericUpDown.Value = new decimal(new int[] { 5, 0, 0, 0 });
             this.pressureAngleNumericUpDown.ValueChanged += new System.EventHandler(this.pressureAngleNumericUpDown_ValueChanged);
@@ -341,10 +357,11 @@ namespace Bolsover.GearCalculatorUi.View
             // baseDiameterLabel
             // 
             this.baseDiameterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseDiameterLabel.Location = new System.Drawing.Point(4, 256);
+            this.baseDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baseDiameterLabel.Location = new System.Drawing.Point(3, 166);
+            this.baseDiameterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.baseDiameterLabel.Name = "baseDiameterLabel";
-            this.baseDiameterLabel.Size = new System.Drawing.Size(194, 50);
+            this.baseDiameterLabel.Size = new System.Drawing.Size(119, 32);
             this.baseDiameterLabel.TabIndex = 22;
             this.baseDiameterLabel.Text = "db";
             this.baseDiameterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -352,35 +369,39 @@ namespace Bolsover.GearCalculatorUi.View
             // baseDiameterSymbol
             // 
             this.baseDiameterSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseDiameterSymbol.Location = new System.Drawing.Point(205, 256);
+            this.baseDiameterSymbol.Location = new System.Drawing.Point(127, 166);
+            this.baseDiameterSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.baseDiameterSymbol.Name = "baseDiameterSymbol";
-            this.baseDiameterSymbol.Size = new System.Drawing.Size(194, 50);
+            this.baseDiameterSymbol.Size = new System.Drawing.Size(119, 32);
             this.baseDiameterSymbol.TabIndex = 23;
             // 
             // baseDiameterFormula
             // 
             this.baseDiameterFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseDiameterFormula.Location = new System.Drawing.Point(406, 256);
+            this.baseDiameterFormula.Location = new System.Drawing.Point(251, 166);
+            this.baseDiameterFormula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.baseDiameterFormula.Name = "baseDiameterFormula";
-            this.baseDiameterFormula.Size = new System.Drawing.Size(194, 50);
+            this.baseDiameterFormula.Size = new System.Drawing.Size(119, 32);
             this.baseDiameterFormula.TabIndex = 24;
             // 
             // baseDiameterTextBox
             // 
             this.baseDiameterTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.baseDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseDiameterTextBox.Location = new System.Drawing.Point(607, 267);
+            this.baseDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baseDiameterTextBox.Location = new System.Drawing.Point(375, 172);
+            this.baseDiameterTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.baseDiameterTextBox.Name = "baseDiameterTextBox";
-            this.baseDiameterTextBox.Size = new System.Drawing.Size(194, 27);
+            this.baseDiameterTextBox.Size = new System.Drawing.Size(119, 20);
             this.baseDiameterTextBox.TabIndex = 25;
             // 
             // addendumLabel
             // 
             this.addendumLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addendumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addendumLabel.Location = new System.Drawing.Point(4, 307);
+            this.addendumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addendumLabel.Location = new System.Drawing.Point(3, 199);
+            this.addendumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addendumLabel.Name = "addendumLabel";
-            this.addendumLabel.Size = new System.Drawing.Size(194, 50);
+            this.addendumLabel.Size = new System.Drawing.Size(119, 32);
             this.addendumLabel.TabIndex = 26;
             this.addendumLabel.Text = "ha";
             this.addendumLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -388,26 +409,29 @@ namespace Bolsover.GearCalculatorUi.View
             // addendumSymbol
             // 
             this.addendumSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addendumSymbol.Location = new System.Drawing.Point(205, 307);
+            this.addendumSymbol.Location = new System.Drawing.Point(127, 199);
+            this.addendumSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addendumSymbol.Name = "addendumSymbol";
-            this.addendumSymbol.Size = new System.Drawing.Size(194, 50);
+            this.addendumSymbol.Size = new System.Drawing.Size(119, 32);
             this.addendumSymbol.TabIndex = 27;
             // 
             // addendumFormula
             // 
             this.addendumFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addendumFormula.Location = new System.Drawing.Point(406, 307);
+            this.addendumFormula.Location = new System.Drawing.Point(251, 199);
+            this.addendumFormula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addendumFormula.Name = "addendumFormula";
-            this.addendumFormula.Size = new System.Drawing.Size(194, 50);
+            this.addendumFormula.Size = new System.Drawing.Size(119, 32);
             this.addendumFormula.TabIndex = 28;
             // 
             // dedendumLabel
             // 
             this.dedendumLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dedendumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dedendumLabel.Location = new System.Drawing.Point(4, 358);
+            this.dedendumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dedendumLabel.Location = new System.Drawing.Point(3, 232);
+            this.dedendumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dedendumLabel.Name = "dedendumLabel";
-            this.dedendumLabel.Size = new System.Drawing.Size(194, 50);
+            this.dedendumLabel.Size = new System.Drawing.Size(119, 32);
             this.dedendumLabel.TabIndex = 29;
             this.dedendumLabel.Text = "hf";
             this.dedendumLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -415,44 +439,49 @@ namespace Bolsover.GearCalculatorUi.View
             // dedendumSymbol
             // 
             this.dedendumSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dedendumSymbol.Location = new System.Drawing.Point(205, 358);
+            this.dedendumSymbol.Location = new System.Drawing.Point(127, 232);
+            this.dedendumSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dedendumSymbol.Name = "dedendumSymbol";
-            this.dedendumSymbol.Size = new System.Drawing.Size(194, 50);
+            this.dedendumSymbol.Size = new System.Drawing.Size(119, 32);
             this.dedendumSymbol.TabIndex = 30;
             // 
             // dedendumFormula
             // 
             this.dedendumFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dedendumFormula.Location = new System.Drawing.Point(406, 358);
+            this.dedendumFormula.Location = new System.Drawing.Point(251, 232);
+            this.dedendumFormula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dedendumFormula.Name = "dedendumFormula";
-            this.dedendumFormula.Size = new System.Drawing.Size(194, 50);
+            this.dedendumFormula.Size = new System.Drawing.Size(119, 32);
             this.dedendumFormula.TabIndex = 31;
             // 
             // addendumTextBox
             // 
             this.addendumTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.addendumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addendumTextBox.Location = new System.Drawing.Point(607, 318);
+            this.addendumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addendumTextBox.Location = new System.Drawing.Point(375, 205);
+            this.addendumTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.addendumTextBox.Name = "addendumTextBox";
-            this.addendumTextBox.Size = new System.Drawing.Size(194, 27);
+            this.addendumTextBox.Size = new System.Drawing.Size(119, 20);
             this.addendumTextBox.TabIndex = 32;
             // 
             // dedendumTextBox
             // 
             this.dedendumTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dedendumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dedendumTextBox.Location = new System.Drawing.Point(607, 369);
+            this.dedendumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dedendumTextBox.Location = new System.Drawing.Point(375, 238);
+            this.dedendumTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.dedendumTextBox.Name = "dedendumTextBox";
-            this.dedendumTextBox.Size = new System.Drawing.Size(194, 27);
+            this.dedendumTextBox.Size = new System.Drawing.Size(119, 20);
             this.dedendumTextBox.TabIndex = 33;
             // 
             // outsideDiameterLabel
             // 
             this.outsideDiameterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.outsideDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outsideDiameterLabel.Location = new System.Drawing.Point(4, 409);
+            this.outsideDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outsideDiameterLabel.Location = new System.Drawing.Point(3, 265);
+            this.outsideDiameterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.outsideDiameterLabel.Name = "outsideDiameterLabel";
-            this.outsideDiameterLabel.Size = new System.Drawing.Size(194, 50);
+            this.outsideDiameterLabel.Size = new System.Drawing.Size(119, 32);
             this.outsideDiameterLabel.TabIndex = 34;
             this.outsideDiameterLabel.Text = "da";
             this.outsideDiameterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -460,10 +489,11 @@ namespace Bolsover.GearCalculatorUi.View
             // rootDiameterLabel
             // 
             this.rootDiameterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rootDiameterLabel.Location = new System.Drawing.Point(4, 460);
+            this.rootDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rootDiameterLabel.Location = new System.Drawing.Point(3, 298);
+            this.rootDiameterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rootDiameterLabel.Name = "rootDiameterLabel";
-            this.rootDiameterLabel.Size = new System.Drawing.Size(194, 50);
+            this.rootDiameterLabel.Size = new System.Drawing.Size(119, 38);
             this.rootDiameterLabel.TabIndex = 35;
             this.rootDiameterLabel.Text = "df";
             this.rootDiameterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -471,60 +501,67 @@ namespace Bolsover.GearCalculatorUi.View
             // outsideDiameterSymbol
             // 
             this.outsideDiameterSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.outsideDiameterSymbol.Location = new System.Drawing.Point(205, 409);
+            this.outsideDiameterSymbol.Location = new System.Drawing.Point(127, 265);
+            this.outsideDiameterSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.outsideDiameterSymbol.Name = "outsideDiameterSymbol";
-            this.outsideDiameterSymbol.Size = new System.Drawing.Size(194, 50);
+            this.outsideDiameterSymbol.Size = new System.Drawing.Size(119, 32);
             this.outsideDiameterSymbol.TabIndex = 36;
             // 
             // rootDiameterSymbol
             // 
             this.rootDiameterSymbol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootDiameterSymbol.Location = new System.Drawing.Point(205, 460);
+            this.rootDiameterSymbol.Location = new System.Drawing.Point(127, 298);
+            this.rootDiameterSymbol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rootDiameterSymbol.Name = "rootDiameterSymbol";
-            this.rootDiameterSymbol.Size = new System.Drawing.Size(194, 50);
+            this.rootDiameterSymbol.Size = new System.Drawing.Size(119, 38);
             this.rootDiameterSymbol.TabIndex = 37;
             // 
             // outsideDiameterFormula
             // 
             this.outsideDiameterFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.outsideDiameterFormula.Location = new System.Drawing.Point(406, 409);
+            this.outsideDiameterFormula.Location = new System.Drawing.Point(251, 265);
+            this.outsideDiameterFormula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.outsideDiameterFormula.Name = "outsideDiameterFormula";
-            this.outsideDiameterFormula.Size = new System.Drawing.Size(194, 50);
+            this.outsideDiameterFormula.Size = new System.Drawing.Size(119, 32);
             this.outsideDiameterFormula.TabIndex = 38;
             // 
             // rootDiameterFormula
             // 
             this.rootDiameterFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootDiameterFormula.Location = new System.Drawing.Point(406, 460);
+            this.rootDiameterFormula.Location = new System.Drawing.Point(251, 298);
+            this.rootDiameterFormula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rootDiameterFormula.Name = "rootDiameterFormula";
-            this.rootDiameterFormula.Size = new System.Drawing.Size(194, 50);
+            this.rootDiameterFormula.Size = new System.Drawing.Size(119, 38);
             this.rootDiameterFormula.TabIndex = 39;
             // 
             // outsideDiameterTextBox
             // 
             this.outsideDiameterTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.outsideDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outsideDiameterTextBox.Location = new System.Drawing.Point(607, 420);
+            this.outsideDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outsideDiameterTextBox.Location = new System.Drawing.Point(375, 271);
+            this.outsideDiameterTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.outsideDiameterTextBox.Name = "outsideDiameterTextBox";
-            this.outsideDiameterTextBox.Size = new System.Drawing.Size(194, 27);
+            this.outsideDiameterTextBox.Size = new System.Drawing.Size(119, 20);
             this.outsideDiameterTextBox.TabIndex = 40;
             // 
             // rootDiameterTextBox
             // 
             this.rootDiameterTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rootDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rootDiameterTextBox.Location = new System.Drawing.Point(607, 471);
+            this.rootDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rootDiameterTextBox.Location = new System.Drawing.Point(375, 307);
+            this.rootDiameterTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.rootDiameterTextBox.Name = "rootDiameterTextBox";
-            this.rootDiameterTextBox.Size = new System.Drawing.Size(194, 27);
+            this.rootDiameterTextBox.Size = new System.Drawing.Size(119, 20);
             this.rootDiameterTextBox.TabIndex = 41;
             // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(808, 1);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(499, 1);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(195, 50);
+            this.label5.Size = new System.Drawing.Size(120, 32);
             this.label5.TabIndex = 42;
             this.label5.Text = "Imperial";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -532,92 +569,102 @@ namespace Bolsover.GearCalculatorUi.View
             // moduleImperial
             // 
             this.moduleImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.moduleImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moduleImperial.Location = new System.Drawing.Point(808, 63);
+            this.moduleImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moduleImperial.Location = new System.Drawing.Point(499, 40);
+            this.moduleImperial.Margin = new System.Windows.Forms.Padding(2);
             this.moduleImperial.Name = "moduleImperial";
-            this.moduleImperial.Size = new System.Drawing.Size(195, 27);
+            this.moduleImperial.Size = new System.Drawing.Size(120, 20);
             this.moduleImperial.TabIndex = 43;
             // 
             // teethImperial
             // 
             this.teethImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.teethImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teethImperial.Location = new System.Drawing.Point(808, 114);
+            this.teethImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teethImperial.Location = new System.Drawing.Point(499, 73);
+            this.teethImperial.Margin = new System.Windows.Forms.Padding(2);
             this.teethImperial.Name = "teethImperial";
-            this.teethImperial.Size = new System.Drawing.Size(195, 27);
+            this.teethImperial.Size = new System.Drawing.Size(120, 20);
             this.teethImperial.TabIndex = 44;
             // 
             // pressureAngleImperial
             // 
             this.pressureAngleImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pressureAngleImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pressureAngleImperial.Location = new System.Drawing.Point(808, 165);
+            this.pressureAngleImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pressureAngleImperial.Location = new System.Drawing.Point(499, 106);
+            this.pressureAngleImperial.Margin = new System.Windows.Forms.Padding(2);
             this.pressureAngleImperial.Name = "pressureAngleImperial";
-            this.pressureAngleImperial.Size = new System.Drawing.Size(195, 27);
+            this.pressureAngleImperial.Size = new System.Drawing.Size(120, 20);
             this.pressureAngleImperial.TabIndex = 45;
             // 
             // pitchDiameterImperial
             // 
             this.pitchDiameterImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pitchDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pitchDiameterImperial.Location = new System.Drawing.Point(808, 216);
+            this.pitchDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pitchDiameterImperial.Location = new System.Drawing.Point(499, 139);
+            this.pitchDiameterImperial.Margin = new System.Windows.Forms.Padding(2);
             this.pitchDiameterImperial.Name = "pitchDiameterImperial";
-            this.pitchDiameterImperial.Size = new System.Drawing.Size(195, 27);
+            this.pitchDiameterImperial.Size = new System.Drawing.Size(120, 20);
             this.pitchDiameterImperial.TabIndex = 46;
             // 
             // baseDiameterImperial
             // 
             this.baseDiameterImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.baseDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseDiameterImperial.Location = new System.Drawing.Point(808, 267);
+            this.baseDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baseDiameterImperial.Location = new System.Drawing.Point(499, 172);
+            this.baseDiameterImperial.Margin = new System.Windows.Forms.Padding(2);
             this.baseDiameterImperial.Name = "baseDiameterImperial";
-            this.baseDiameterImperial.Size = new System.Drawing.Size(195, 27);
+            this.baseDiameterImperial.Size = new System.Drawing.Size(120, 20);
             this.baseDiameterImperial.TabIndex = 47;
             // 
             // addendumImperial
             // 
             this.addendumImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.addendumImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addendumImperial.Location = new System.Drawing.Point(808, 318);
+            this.addendumImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addendumImperial.Location = new System.Drawing.Point(499, 205);
+            this.addendumImperial.Margin = new System.Windows.Forms.Padding(2);
             this.addendumImperial.Name = "addendumImperial";
-            this.addendumImperial.Size = new System.Drawing.Size(195, 27);
+            this.addendumImperial.Size = new System.Drawing.Size(120, 20);
             this.addendumImperial.TabIndex = 48;
             // 
             // dedendumImperial
             // 
             this.dedendumImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dedendumImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dedendumImperial.Location = new System.Drawing.Point(808, 369);
+            this.dedendumImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dedendumImperial.Location = new System.Drawing.Point(499, 238);
+            this.dedendumImperial.Margin = new System.Windows.Forms.Padding(2);
             this.dedendumImperial.Name = "dedendumImperial";
-            this.dedendumImperial.Size = new System.Drawing.Size(195, 27);
+            this.dedendumImperial.Size = new System.Drawing.Size(120, 20);
             this.dedendumImperial.TabIndex = 49;
             // 
             // outsideDiameterImperial
             // 
             this.outsideDiameterImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.outsideDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outsideDiameterImperial.Location = new System.Drawing.Point(808, 420);
+            this.outsideDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outsideDiameterImperial.Location = new System.Drawing.Point(499, 271);
+            this.outsideDiameterImperial.Margin = new System.Windows.Forms.Padding(2);
             this.outsideDiameterImperial.Name = "outsideDiameterImperial";
-            this.outsideDiameterImperial.Size = new System.Drawing.Size(195, 27);
+            this.outsideDiameterImperial.Size = new System.Drawing.Size(120, 20);
             this.outsideDiameterImperial.TabIndex = 50;
             // 
             // rootDiameterImperial
             // 
             this.rootDiameterImperial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rootDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rootDiameterImperial.Location = new System.Drawing.Point(808, 471);
+            this.rootDiameterImperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rootDiameterImperial.Location = new System.Drawing.Point(499, 307);
+            this.rootDiameterImperial.Margin = new System.Windows.Forms.Padding(2);
             this.rootDiameterImperial.Name = "rootDiameterImperial";
-            this.rootDiameterImperial.Size = new System.Drawing.Size(195, 27);
+            this.rootDiameterImperial.Size = new System.Drawing.Size(120, 20);
             this.rootDiameterImperial.TabIndex = 51;
             // 
             // SimpleGearView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tablePanel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SimpleGearView";
-            this.Size = new System.Drawing.Size(1007, 536);
+            this.Size = new System.Drawing.Size(622, 331);
             this.tablePanel.ResumeLayout(false);
             this.tablePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moduleNumericUpDown)).EndInit();

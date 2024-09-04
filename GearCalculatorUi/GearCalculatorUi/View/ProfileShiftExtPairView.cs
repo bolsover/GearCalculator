@@ -19,6 +19,8 @@ public partial class ProfileShiftExtPairView : UserControl
     public event EventHandler EditX1Event;
     public event EventHandler EditX2Event;
     public event EventHandler EditAxEvent;
+    
+    public event EventHandler AutoCalcModeEvent;
 
     private void mUD_ValueChanged(object sender, EventArgs e)
     {
@@ -53,5 +55,10 @@ public partial class ProfileShiftExtPairView : UserControl
     private void axUD_ValueChanged(object sender, EventArgs e)
     {
         EditAxEvent?.Invoke(sender, e);
+    }
+
+    private void autoCalcMode_CheckedChanged(object sender, EventArgs e)
+    {
+        AutoCalcModeEvent?.Invoke(sender, e);
     }
 }

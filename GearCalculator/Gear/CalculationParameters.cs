@@ -13,6 +13,7 @@ public class CalculationParameters
     private GearParameter _workingCentreDistance;
     private GearParameter _coefficientProfileShiftPinion;
     private GearParameter _coefficientProfileShiftWheel;
+    private GearParameter _autoCalcMode;
 
     public GearParameter Module
     {
@@ -60,5 +61,11 @@ public class CalculationParameters
     {
         get => _coefficientProfileShiftWheel;
         set => _coefficientProfileShiftWheel = value;
+    }
+    
+    public GearParameter AutoCalcMode
+    {
+        get => _autoCalcMode;
+        set => _autoCalcMode = value;
     }
 }

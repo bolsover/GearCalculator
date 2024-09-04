@@ -13,6 +13,7 @@ public sealed class InvoluteSpurGearPair : Gear
     public readonly TeethPinion TeethPinion = new();
     public readonly TeethWheel TeethWheel = new();
     public readonly PressureAngle PressureAngle = new();
+    public readonly AutoCalcMode AutoCalcMode = new ();
 
     // calculated properties
     public readonly Addendum Addendum = new();
@@ -26,6 +27,7 @@ public sealed class InvoluteSpurGearPair : Gear
     public readonly RootDiameterPinion RootDiameterPinion = new();
     public readonly RootDiameterWheel RootDiameterWheel = new();
     public readonly StandardCentreDistance StandardCentreDistance = new();
+   
 
     
     public InvoluteSpurGearPair()

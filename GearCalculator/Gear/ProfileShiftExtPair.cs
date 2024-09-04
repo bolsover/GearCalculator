@@ -20,6 +20,7 @@ public sealed class ProfileShiftExtPair : Gear
     public readonly WorkingCentreDistance WorkingCentreDistance = new();
     public readonly CoefficientProfileShiftPinion CoefficientProfileShiftPinion = new();
     public readonly CoefficientProfileShiftWheel CoefficientProfileShiftWheel = new();
+    public readonly AutoCalcMode AutoCalcMode = new ();
 
     // calculated properties
     public readonly BaseDiameterPinion BaseDiameterPinion = new();
@@ -61,12 +62,14 @@ public sealed class ProfileShiftExtPair : Gear
         CalculationParameters.WorkingCentreDistance = WorkingCentreDistance;
         CalculationParameters.CoefficientProfileShiftPinion = CoefficientProfileShiftPinion;
         CalculationParameters.CoefficientProfileShiftWheel = CoefficientProfileShiftWheel;
+        CalculationParameters.AutoCalcMode = AutoCalcMode;
     }
 
 
     public void Calculate()
     {
         Module.Calc(CalculationParameters);
+        PressureAngle.Calc(CalculationParameters);
         WorkingPressureAngle.Calc(CalculationParameters);
         CentreDistanceIncrementFactor.Calc(CalculationParameters);
         SumCoefficientProfileShift.Calc(CalculationParameters);

@@ -62,5 +62,6 @@ public enum GearParameterName
     PseiDedendumPinion,
     PseiDedendumWheel,
     PseiInvoluteFunction,
-    PseiWorkingPressureAngle
+    PseiWorkingPressureAngle,
+    CalcMethod
 }

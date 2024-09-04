@@ -17,6 +17,7 @@ public sealed class ProfileShiftedExtIntSpurGearPair : Gear
     public readonly CoefficientProfileShiftPinion CoefficientProfileShiftPinion = new();
     public readonly CoefficientProfileShiftWheel CoefficientProfileShiftWheel = new();
     public readonly WorkingCentreDistance WorkingCentreDistance = new();
+    public readonly AutoCalcMode AutoCalcMode = new ();
 
     // calculated properties
     public readonly BaseDiameterPinion BaseDiameterPinion = new();
@@ -24,15 +25,16 @@ public sealed class ProfileShiftedExtIntSpurGearPair : Gear
     public readonly PitchDiameterPinion PitchDiameterPinion = new();
     public readonly PitchDiameterWheel PitchDiameterWheel = new();
     public readonly PressureAngle PressureAngle = new();
-    public readonly PseiAddendumPinion PseiAddendumPinion = new();
-    public readonly PseiAddendumWheel PseiAddendumWheel = new();
-    public readonly PseiCentreDistanceIncrementFactor PseiCentreDistanceIncrementFactor = new();
-    public readonly PseiDedendumPinion PseiDedendumPinion = new();
-    public readonly PseiDedendumWheel PseiDedendumWheel = new();
-    public readonly PseiDifferenceCoefficientProfileShift PseiDifferenceCoefficientProfileShift = new();
-    public readonly PseiInvoluteFunction PseiInvoluteFunction = new();
-    public readonly PseiStandardCentreDistance PseiStandardCentreDistance = new();
-    public readonly PseiWorkingPressureAngle PseiWorkingPressureAngle = new();
+    public readonly PseiAddendumPinion AddendumPinion = new();
+    public readonly PseiAddendumWheel AddendumWheel = new();
+    public readonly PseiCentreDistanceIncrementFactor CentreDistanceIncrementFactor = new();
+    public readonly PseiDedendumPinion DedendumPinion = new();
+    public readonly PseiDedendumWheel DedendumWheel = new();
+    public readonly PseiDifferenceCoefficientProfileShift DifferenceCoefficientProfileShift = new();
+    public readonly PseiInvoluteFunction InvoluteFunction = new();
+    public readonly PseiStandardCentreDistance StandardCentreDistance = new();
+    public readonly PseiWorkingPressureAngle WorkingPressureAngle = new();
+    
 
     
 
@@ -52,6 +54,7 @@ public sealed class ProfileShiftedExtIntSpurGearPair : Gear
         CalculationParameters.WorkingCentreDistance = WorkingCentreDistance;
         CalculationParameters.CoefficientProfileShiftPinion = CoefficientProfileShiftPinion;
         CalculationParameters.CoefficientProfileShiftWheel = CoefficientProfileShiftWheel;
+        CalculationParameters.AutoCalcMode = AutoCalcMode;
     }
 
 
@@ -60,17 +63,19 @@ public sealed class ProfileShiftedExtIntSpurGearPair : Gear
         Module.Calc(CalculationParameters);
         BaseDiameterPinion.Calc(CalculationParameters);
         BaseDiameterWheel.Calc(CalculationParameters);
-        PseiStandardCentreDistance.Calc(CalculationParameters);
-        PseiCentreDistanceIncrementFactor.Calc(CalculationParameters);
-        PseiInvoluteFunction.Calc(CalculationParameters);
+        StandardCentreDistance.Calc(CalculationParameters);
+        CentreDistanceIncrementFactor.Calc(CalculationParameters);
+        InvoluteFunction.Calc(CalculationParameters);
         PitchDiameterPinion.Calc(CalculationParameters);
         PitchDiameterWheel.Calc(CalculationParameters);
-        PseiAddendumPinion.Calc(CalculationParameters);
-        PseiAddendumWheel.Calc(CalculationParameters);
+        AddendumPinion.Calc(CalculationParameters);
+        AddendumWheel.Calc(CalculationParameters);
         WholeDepth.Calc(CalculationParameters);
-        PseiDedendumPinion.Calc(CalculationParameters);
-        PseiDedendumWheel.Calc(CalculationParameters);
-        PseiDifferenceCoefficientProfileShift.Calc(CalculationParameters);
-        PseiWorkingPressureAngle.Calc(CalculationParameters);
+        DedendumPinion.Calc(CalculationParameters);
+        DedendumWheel.Calc(CalculationParameters);
+        DifferenceCoefficientProfileShift.Calc(CalculationParameters);
+        WorkingPressureAngle.Calc(CalculationParameters);
+        WorkingCentreDistance.Calc(CalculationParameters);
+        
     }
 }

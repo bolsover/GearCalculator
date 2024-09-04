@@ -60,10 +60,27 @@ public class StandardGearPairPresenter
       
     }
     
-    private void UpdateGearDetails(GearParameter gearPart, Label label, Label symbolImage, Label formulaImage, TextBox textBox, TextBox imperialTextBox)
+    // private void UpdateGearDetails(GearParameter gearPart, Label label, Label symbolImage, Label formulaImage, TextBox textBox, TextBox imperialTextBox)
+    // {
+    //    
+    //         if (label != null) label.Text = gearPart.Description;
+    //    
+    //     symbolImage.Image = LatexUtils.CreateImageFromLatex(gearPart.LatexSymbol);
+    //     formulaImage.Image = LatexUtils.CreateImageFromLatex(gearPart.LatexFormula);
+    //
+    //     var binding = new Binding("Text", gearPart, "Value");
+    //     binding.Format += DoubleToMMString;
+    //     textBox.DataBindings.Add(binding);
+    //
+    //     var imperialBinding = new Binding("Text", gearPart, "ImperialValue");
+    //     imperialBinding.Format += DoubleToImperial;
+    //     imperialTextBox.DataBindings.Add(imperialBinding);
+    // }
+    
+    private void UpdateGearDetails(GearParameter gearPart, Label label, PictureBox symbolImage, PictureBox formulaImage, TextBox textBox, TextBox imperialTextBox)
     {
        
-            if (label != null) label.Text = gearPart.Description;
+        if (label != null) label.Text = gearPart.Description;
        
         symbolImage.Image = LatexUtils.CreateImageFromLatex(gearPart.LatexSymbol);
         formulaImage.Image = LatexUtils.CreateImageFromLatex(gearPart.LatexFormula);

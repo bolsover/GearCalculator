@@ -13,6 +13,7 @@ public class GearParameter : INotifyPropertyChanged
     private double _altValue;
     private string _altStringValue = "";
     private string _notes = "";
+    private bool _auto = true;
 
     public GearParameterName ParameterName { get; set; }
     public string Description { get; set; }
@@ -49,6 +50,12 @@ public class GearParameter : INotifyPropertyChanged
 
     public string LatexSymbol { get; set; }
     public string LatexFormula { get; set; }
+
+    public bool Auto
+    {
+        get => _auto;
+        set => _auto = value;
+    }
 
     public readonly Func<double, double> CalcImperial = (value) => value / 25.4;
 
