@@ -17,7 +17,7 @@ public class WorkingCentreDistance : GearParameter
 
     public void Calc(CalculationParameters calculationParameters)
     {
-        ImperialValue = Value;
+        ImperialValue = Value/25.4;
     }
    
 }

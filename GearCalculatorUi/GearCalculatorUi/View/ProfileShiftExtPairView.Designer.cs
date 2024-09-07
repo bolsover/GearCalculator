@@ -176,9 +176,9 @@ partial class ProfileShiftExtPairView
         this.label15 = new System.Windows.Forms.Label();
         this.autoL = new System.Windows.Forms.Label();
         this.autoN = new System.Windows.Forms.Label();
+        this.buttonPanel = new System.Windows.Forms.Panel();
         this.autoCalcMode = new System.Windows.Forms.RadioButton();
         this.manualCalcMode = new System.Windows.Forms.RadioButton();
-        this.buttonPanel = new System.Windows.Forms.Panel();
         this.tablePanel.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)(this.alphaS)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(this.z1S)).BeginInit();
@@ -241,6 +241,7 @@ partial class ProfileShiftExtPairView
         // 
         // tablePanel
         // 
+        this.tablePanel.AutoScroll = true;
         this.tablePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
         this.tablePanel.ColumnCount = 10;
         this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -252,7 +253,7 @@ partial class ProfileShiftExtPairView
         this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
         this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
         this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-        this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+        this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
         this.tablePanel.Controls.Add(this.label2, 1, 0);
         this.tablePanel.Controls.Add(this.label3, 1, 1);
         this.tablePanel.Controls.Add(this.label4, 2, 1);
@@ -427,7 +428,7 @@ partial class ProfileShiftExtPairView
         this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
         this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
         this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-        this.tablePanel.Size = new System.Drawing.Size(1084, 844);
+        this.tablePanel.Size = new System.Drawing.Size(1174, 836);
         this.tablePanel.TabIndex = 0;
         // 
         // label2
@@ -1972,7 +1973,7 @@ partial class ProfileShiftExtPairView
         this.notesLabel.Location = new System.Drawing.Point(932, 1);
         this.notesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
         this.notesLabel.Name = "notesLabel";
-        this.notesLabel.Size = new System.Drawing.Size(179, 35);
+        this.notesLabel.Size = new System.Drawing.Size(236, 35);
         this.notesLabel.TabIndex = 135;
         this.notesLabel.Text = "Notes";
         this.notesLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1983,7 +1984,7 @@ partial class ProfileShiftExtPairView
         this.mN.Location = new System.Drawing.Point(932, 73);
         this.mN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
         this.mN.Name = "mN";
-        this.mN.Size = new System.Drawing.Size(179, 35);
+        this.mN.Size = new System.Drawing.Size(236, 35);
         this.mN.TabIndex = 136;
         this.mN.Text = "m Note";
         this.mN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1994,7 +1995,7 @@ partial class ProfileShiftExtPairView
         this.label14.Location = new System.Drawing.Point(932, 289);
         this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
         this.label14.Name = "label14";
-        this.label14.Size = new System.Drawing.Size(179, 35);
+        this.label14.Size = new System.Drawing.Size(236, 35);
         this.label14.TabIndex = 137;
         this.label14.Text = "sumX Note";
         this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2054,7 +2055,7 @@ partial class ProfileShiftExtPairView
         this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
         this.label15.Location = new System.Drawing.Point(933, 757);
         this.label15.Name = "label15";
-        this.label15.Size = new System.Drawing.Size(177, 60);
+        this.label15.Size = new System.Drawing.Size(234, 60);
         this.label15.TabIndex = 143;
         // 
         // autoL
@@ -2078,28 +2079,6 @@ partial class ProfileShiftExtPairView
         this.autoN.Text = "autoN";
         this.autoN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // autoCalcMode
-        // 
-        this.autoCalcMode.Checked = true;
-        this.autoCalcMode.Dock = System.Windows.Forms.DockStyle.Left;
-        this.autoCalcMode.Location = new System.Drawing.Point(0, 0);
-        this.autoCalcMode.Name = "autoCalcMode";
-        this.autoCalcMode.Size = new System.Drawing.Size(98, 35);
-        this.autoCalcMode.TabIndex = 145;
-        this.autoCalcMode.TabStop = true;
-        this.autoCalcMode.Text = "Automatic";
-        this.autoCalcMode.UseVisualStyleBackColor = true;
-        // 
-        // manualCalcMode
-        // 
-        this.manualCalcMode.Dock = System.Windows.Forms.DockStyle.Right;
-        this.manualCalcMode.Location = new System.Drawing.Point(103, 0);
-        this.manualCalcMode.Name = "manualCalcMode";
-        this.manualCalcMode.Size = new System.Drawing.Size(98, 35);
-        this.manualCalcMode.TabIndex = 146;
-        this.manualCalcMode.Text = "Manual";
-        this.manualCalcMode.UseVisualStyleBackColor = true;
-        // 
         // buttonPanel
         // 
         this.tablePanel.SetColumnSpan(this.buttonPanel, 2);
@@ -2112,14 +2091,38 @@ partial class ProfileShiftExtPairView
         this.buttonPanel.Size = new System.Drawing.Size(201, 35);
         this.buttonPanel.TabIndex = 149;
         // 
+        // autoCalcMode
+        // 
+        this.autoCalcMode.Checked = true;
+        this.autoCalcMode.Dock = System.Windows.Forms.DockStyle.Left;
+        this.autoCalcMode.Location = new System.Drawing.Point(0, 0);
+        this.autoCalcMode.Name = "autoCalcMode";
+        this.autoCalcMode.Size = new System.Drawing.Size(98, 35);
+        this.autoCalcMode.TabIndex = 145;
+        this.autoCalcMode.TabStop = true;
+        this.autoCalcMode.Text = "Automatic";
+        this.autoCalcMode.UseVisualStyleBackColor = true;
+        this.autoCalcMode.CheckedChanged += new System.EventHandler(this.autoCalcMode_CheckedChanged);
+        // 
+        // manualCalcMode
+        // 
+        this.manualCalcMode.Dock = System.Windows.Forms.DockStyle.Right;
+        this.manualCalcMode.Location = new System.Drawing.Point(103, 0);
+        this.manualCalcMode.Name = "manualCalcMode";
+        this.manualCalcMode.Size = new System.Drawing.Size(98, 35);
+        this.manualCalcMode.TabIndex = 146;
+        this.manualCalcMode.Text = "Manual";
+        this.manualCalcMode.UseVisualStyleBackColor = true;
+        // 
         // ProfileShiftExtPairView
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.Controls.Add(this.tablePanel);
         this.Margin = new System.Windows.Forms.Padding(2);
         this.Name = "ProfileShiftExtPairView";
-        this.Size = new System.Drawing.Size(1084, 844);
+        this.Size = new System.Drawing.Size(1174, 836);
         this.tablePanel.ResumeLayout(false);
         this.tablePanel.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)(this.alphaS)).EndInit();

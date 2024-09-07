@@ -69,6 +69,7 @@ public sealed class ProfileShiftExtPair : Gear
     public void Calculate()
     {
         Module.Calc(CalculationParameters);
+        WorkingCentreDistance.Calc(CalculationParameters);
         PressureAngle.Calc(CalculationParameters);
         WorkingPressureAngle.Calc(CalculationParameters);
         CentreDistanceIncrementFactor.Calc(CalculationParameters);

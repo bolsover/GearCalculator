@@ -10,7 +10,7 @@ public class PitchDiameterWheel : GearParameter
     public PitchDiameterWheel()
     {
         ParameterName = GearParameterName.PitchDiameterWheel;
-        Description = "PitchDiameterWheel";
+        Description = "Pitch Diameter";
 
         LatexSymbol = LatexSymbols.PitchDiameterWheel;
         LatexFormula = LatexFormulae.PitchDiameterWheel; //@"z_{2}m";
